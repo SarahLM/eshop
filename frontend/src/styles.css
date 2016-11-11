@@ -31,6 +31,7 @@ button {
 	padding: 2%;
 	color: #FFFFFF;
 	cursor: pointer;
+	margin-top: 20%;
 }
 button:hover, button:active, button:focus {
 	font-family: 'Avenir';
@@ -42,11 +43,22 @@ button:hover, button:active, button:focus {
 /************* INPUT ************/
 input {
 	font-family: 'Avenir';
-	font-size: 13px;
+	font-size: 12px;
 	outline: 0;
   	background: #FFFFFF;
   	width: 80%;
   	border: 1px solid #E9E9E9;
   	padding: 8px;
   	box-sizing: border-box;
+}
+
+/************* MESSAGE ************/
+.message a{
+	color: #5A9C7B;
+	text-decoration: none;
+}
+
+.message a:hover{
+	color: #006633;
+	text-decoration: none;
 }
