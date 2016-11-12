@@ -25,6 +25,7 @@ p {
 button {
 	font-family: 'Avenir';
 	font-size: 13px;
+	text-transform: uppercase;
 	background-color: #32845B;
 	width: 95%;
 	border: 1px solid #32845B;
@@ -36,6 +37,7 @@ button {
 button:hover, button:active, button:focus {
 	font-family: 'Avenir';
 	background: #FFFFFF;
+	text-transform: uppercase;
 	border: 1px solid #006633;
 	color: #006633;
 }
