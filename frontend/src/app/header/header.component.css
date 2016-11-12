@@ -1,0 +1,29 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .wrapper {
+    height: 100%;
+    justify-content: center;
+	align-content: center;
+	position: relative;
+	text-align: center;
+  }
+  main {
+    min-height: 200px
+  }
+}
+.logo-class {
+	height: 110px;
+	width: 600px;
+	margin: 12px auto auto;
+	display: block;
+   	-webkit-transition-transform: 1s ease;
+	transition: transform 1s ease;
+}
+
+@media screen and (max-width: 660px) {
+	.logo-class {
+		height: 86px;
+		width: 465px;
+		-webkit-transition-transform: 1s ease;
+		transition: transform 1s ease;
+	}
+}
