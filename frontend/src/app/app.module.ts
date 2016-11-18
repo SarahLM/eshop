@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LightboxComponent } from './lightbox/lightbox.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,13 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .wrapper {
+    min-height: 100%;
+    height: auto !important;
     height: 100%;
+    margin: 0 auto -142px;
   }
   main {
-    min-height: 200px
+    height: 50px;
+    clear: both;
   }
 }
 
@@ -52,7 +56,7 @@ main {
 	li {
 		width: 100%;
 		border-bottom: 1px solid #E9E9E9;
-    padding: 1%;
+    padding: 2%;
 	}
 	a {
 		width: 100%;
