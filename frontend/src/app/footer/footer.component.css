@@ -42,6 +42,8 @@ main {
   text-align: center;
 }
 
+
+
 @media screen and (max-width: 660px) {
 	.nav {
 	    width: 100%;

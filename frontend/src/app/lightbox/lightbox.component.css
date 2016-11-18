@@ -1,0 +1,24 @@
+.textright {
+    float: right;
+}
+
+.white_content {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    border: 5px solid gray;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+#overlay {
+    background-color: rgba(0,0,0,.5);
+    height: 50%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+}
