@@ -12,6 +12,7 @@ import { LightboxComponent } from './lightbox/lightbox.component';
 import { routing } from './app.routes';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { StartpageComponent } from './startpage/startpage.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StartpageComponent } from './startpage/startpage.component';
     RegistrationComponent,
     LightboxComponent,
     MainmenuComponent,
-    StartpageComponent
+    StartpageComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
