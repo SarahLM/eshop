@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
 import { routing } from './app.routes';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { StartpageComponent } from './startpage/startpage.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { routing } from './app.routes';
     HeaderComponent,
     FooterComponent,
     RegistrationComponent,
-    LightboxComponent
+    LightboxComponent,
+    MainmenuComponent,
+    StartpageComponent
   ],
   imports: [
     BrowserModule,
