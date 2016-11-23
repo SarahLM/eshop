@@ -1,5 +1,10 @@
 
-var express = require('express');
+var express = require('express'),
+authentication = require('express-authentication'),
+basicAuth = require('basic-auth'),
+app = express();
+
+
 var path = require('path');
 //var favicon = require('serve-favicon');
 //var logger = require('morgan');
@@ -9,7 +14,6 @@ var bodyParser = require('body-parser');
 
 
 
-var app = express();
 
 
 
@@ -19,7 +23,11 @@ var app = express();
 //var pgp = require("pg-promise")(/*options*/);
 //var db = pgp("postgres://postgres@projektwebshop.f4.htw-berlin.de:5432/webshopdatabase");
 
-var datenbank = require('./datenbank.js')
+var registrierung = require('./registrierung.js')
+var auth = require('./auth.js')
+var authe = require('./authe.js')
+
+
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
   res.send('hallo hier ist das Backend');
@@ -30,6 +38,10 @@ app.get('/home', function(req, res) {
 });
 
 
- app.get('/datenbank', datenbank.datenbanktest)
+ app.get('/registrierung/:id/:nutzer/:password', registrierung.registrierung);
+
+ app.get('/auth', auth.api);
+
+ app.get('/authe',authe.authe);
 
 var server = app.listen(8080, function() {})
