@@ -1,6 +1,7 @@
 /****** GENERAL DIV ******/
 #search-bar {
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border: 1px solid #E9E9E9;
 }
 

@@ -13,6 +13,8 @@ import { routing } from './app.routes';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { TeaserbannerComponent } from './teaserbanner/teaserbanner.component';
+import { ProductDivComponent } from './product-div/product-div.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     LightboxComponent,
     MainmenuComponent,
     StartpageComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    TeaserbannerComponent,
+    ProductDivComponent
   ],
   imports: [
     BrowserModule,

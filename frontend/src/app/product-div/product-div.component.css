@@ -1,0 +1,37 @@
+section {
+  display: block;
+}
+
+.div-listproduct {
+  position: relative;
+}
+
+.div-product {
+  width: 280px;
+  margin-right: 10px;
+}
+
+.link {
+  min-height: 270px;
+  background-color: red;
+  display: block;
+  position: relative;
+  padding: 20px;
+}
+
+.link-imgwrapper {
+  margin: 0 auto 15px;
+  min-height: 140px;
+  position: relative;
+  text-align: center;
+}
+
+.link-title {
+  color: #262626;
+  display: block;
+  font-size: .875rem;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

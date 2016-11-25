@@ -1,0 +1,29 @@
+.content {
+	float: left;
+}
+
+.teaserblock {
+	float: left;
+	display: inline;
+	max-width: 50%;
+}
+
+.teaserblock img {
+	width: 100%;
+}
+
+.teaserblock a h2, h3{
+	text-align: center;
+	color: #B2B2B2;
+	font-weight: normal;
+}
+
+.teaserblock a h2 {
+	text-transform: uppercase;
+}
+
+.teaserblock-text {
+	border: 1px solid #E9E9E9;
+	margin: 0px -1px;
+	padding: 20px;
+}
