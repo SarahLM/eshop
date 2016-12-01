@@ -10,7 +10,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent	},
   { path: 'registration', component: RegistrationComponent	},
-  { path: 'startpage', component: StartpageComponent}
+  { path: 'startpage', component: StartpageComponent	}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
