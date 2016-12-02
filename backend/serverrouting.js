@@ -4,6 +4,7 @@ authentication = require('express-authentication'),
 basicAuth = require('basic-auth'),
 app = express();
 
+var nodemailer = require('nodemailer');
 
 var path = require('path');
 //var favicon = require('serve-favicon');
@@ -15,7 +16,7 @@ var bodyParser = require('body-parser');
 
 
 
-
+app.use(bodyParser.json());
 
 //app.use(express.static(path.join(__dirname, 'static')));
 //var app = express();
@@ -26,6 +27,7 @@ var bodyParser = require('body-parser');
 var registrierung = require('./registrierung.js')
 var auth = require('./auth.js')
 var authe = require('./authe.js')
+var mailerConfig = require('./mailerConfig.js')
 
 
 // respond with "hello world" when a GET request is made to the homepage
@@ -39,6 +41,9 @@ app.get('/home', function(req, res) {
 
 
  app.get('/registrierung/:id/:nutzer/:password', registrierung.registrierung);
+
+ //app.post('/Mail', handlerMail.registerCustomer);
+ app.get('/SendMail', mailerConfig.sendingMail);
 
  app.get('/auth', auth.api);
 
