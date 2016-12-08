@@ -2,6 +2,12 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next()
+})
+
 app.get('/test', function (req, res) {
    fs.readFile( __dirname + "/tests/" + "test.json", 'utf8', function (err, data) {
        console.log( data );
@@ -14,7 +20,6 @@ app.get('/', function(req, res) {
 });
 
 
-
 var server = app.listen(8081, function () {
 
   var host = server.address().address
@@ -23,4 +28,3 @@ var server = app.listen(8081, function () {
   console.log("Test app listening at http://%s:%s", host, port)
 
 })
-
