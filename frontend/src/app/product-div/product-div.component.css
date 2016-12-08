@@ -15,17 +15,13 @@ section:before, section:after {
 }
 
 .product {
-    margin-left: 6px;
-    margin-right: 6px;
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
-    float: left;
 }
 
 .link {
   min-height: 150px;
-  background-color: red;
   display: block;
   position: relative;
   padding: 10px;

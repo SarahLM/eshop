@@ -3,13 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { DataService } from './_services/dataService';
+import { routing } from './app.routes';
+
+//import { AuthenticationService, UserService } from './_services/index';
+//import { AuthGuard } from './_guards/index';
+
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
-import { routing } from './app.routes';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
@@ -36,7 +42,7 @@ import { ProductDivComponent } from './product-div/product-div.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

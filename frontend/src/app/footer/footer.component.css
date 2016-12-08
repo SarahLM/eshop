@@ -31,7 +31,7 @@ a {
 	font-size: 12px;
 	font-family: 'Avenir';
   text-decoration: none;
-	color: #5A9C7B;  	
+	color: #5A9C7B;
 	transition: all 0.5s ease-in-out;
 }
 a:hover, a:focus, a:active {
@@ -44,7 +44,6 @@ main {
   flex-flow: row wrap;
   flex: 1 1 auto;
 }
-
 
 
 @media screen and (max-width: 660px) {

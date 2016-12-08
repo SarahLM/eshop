@@ -1,45 +1,12 @@
 <section>
-    <div class="col-md-3 col-sm-4 product">
+    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
       <a class="link">
         <a href="" class="product-imgwrapper">
           <img src="/assets/images/placeholder-img.png">
         </a>
-        <h3 class="product-category">Category 1</h3>
-        <h2 class="product-category-title">Article name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category 1</h3>
-        <h2 class="product-category-title">Article name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category 1</h3>
-        <h2 class="product-category-title">Article name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category 1</h3>
-        <h2 class="product-category-title">Article name</h2>
-        <h3 class="product-preis">€€€</h3>
+        <h3 class="product-category">{{item.category}}</h3>
+        <h2 class="product-category-title">{{item.name}}</h2>
+        <h3 class="product-preis">{{item.preis}}</h3>
       </a>
     </div>
 </section>
