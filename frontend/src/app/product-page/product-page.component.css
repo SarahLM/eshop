@@ -1,3 +1,49 @@
+/****** NAVBAR ******/
+.navbar {
+  color: silver;
+  display: block;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3%;
+}
+
+span .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+.navbar ul {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  margin: 12px 0 0 5px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.navbar li {
+  position: relative;
+  display: inline-block;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-size: 10px;
+}
+
+.navbar a {
+  margin: 0px 5px 0px 5px;
+}
+
+.divisor {
+  border-right: 1px solid #B2B2B2;
+}
+
 .item {
   margin: 5% 0% 5%
 }

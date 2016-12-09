@@ -45,6 +45,13 @@ p {
 	width: 100%;
 }
 
+/************ LINK ************/
+a {
+	text-decoration: none;
+	color: #B2B2B2;
+	font-weight: normal;
+}
+
 /************ BUTTON ************/
 button {
 	font-family: 'Avenir';
