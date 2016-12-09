@@ -21,6 +21,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { TeaserbannerComponent } from './teaserbanner/teaserbanner.component';
 import { ProductDivComponent } from './product-div/product-div.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductDivComponent } from './product-div/product-div.component';
     StartpageComponent,
     SearchbarComponent,
     TeaserbannerComponent,
-    ProductDivComponent
+    ProductDivComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

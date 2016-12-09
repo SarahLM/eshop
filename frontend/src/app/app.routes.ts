@@ -5,12 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StartpageComponent } from './startpage/startpage.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+
 
 //hier werden die Routes definiert
 export const routes: Routes = [
   { path: '', component: StartpageComponent },
   { path: 'login', component: LoginComponent	},
   { path: 'registration', component: RegistrationComponent	},
+  { path: 'product-page', component: ProductPageComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

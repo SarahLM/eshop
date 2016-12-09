@@ -1,15 +1,13 @@
 
-<a ngFor="#text"(click)="clicked()">Showlightbox</a> {{show}}
+<a (click)="OpenLightbox()">Showlightbox</a> {{show}} 
 
 <!-- LIGHTBOX CODE BEGIN -->
-<template ngIf="currentText">
-	<div hidden=!show id="lightbox" class="lightbox">
+<template>
+	<div id="lightbox" class="lightbox" *ngFor="let text of texts">
 	    <div class="white_content">
 	        <a class="textright" id="close">Close</a>
 	            <p>blablabla</p>
 	    </div>
 	</div>
 </template>
-
-
 <!-- LIGHTBOX CODE END -->

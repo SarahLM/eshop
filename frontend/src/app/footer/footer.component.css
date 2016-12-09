@@ -1,14 +1,9 @@
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px;
-  }
-  main {
-    height: 50px;
+#footer {
     clear: both;
-  }
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
 }
 
 .nav {
@@ -38,11 +33,6 @@ a:hover, a:focus, a:active {
   color: #006633;
   text-decoration: none;
   cursor: pointer;
-}
-main {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 1 1 auto;
 }
 
 

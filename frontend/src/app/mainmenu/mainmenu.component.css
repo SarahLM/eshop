@@ -10,7 +10,7 @@
 .nav ul {
   margin: 0;
   padding: 0;
-  list-style: none;  
+  list-style: none;
 }
 
 .first-ul {
@@ -18,7 +18,7 @@
 }
 
 /****** FIRST LEVEL UL STYLE ******/
-.nav ul, 
+.nav ul,
 .nav .dropdown-content-inner {
   width: 90%;
   max-width: 70em;
@@ -49,6 +49,7 @@
   background-color: white;
   left: 0;
   border-bottom: 1px solid #E9E9E9;
+  z-index:9999;
 }
 
 .nav ul li:hover .dropdown-content {
