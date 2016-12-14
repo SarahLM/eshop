@@ -6,7 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { ProductPageComponent } from './product-page/product-page.component';
-
+import { DashboardStartpageComponent } from './dashboard-startpage/dashboard-startpage.component';
+import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-productpage.component';
 
 //hier werden die Routes definiert
 export const routes: Routes = [
@@ -14,6 +15,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent	},
   { path: 'registration', component: RegistrationComponent	},
   { path: 'product-page', component: ProductPageComponent },
+  { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
+  { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

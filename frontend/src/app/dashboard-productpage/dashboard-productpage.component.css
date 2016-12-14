@@ -2,7 +2,7 @@
   width:100%;
 }
 .dashboard-form{
-  
+
   text-align: left;
   margin-top: 5px;
 }
@@ -14,13 +14,6 @@ left: 300px;
 top: 303px;
 width: 90%;
 height: 40px;
-}
-
-#primarybtn{
-	margin-top: 10%;
-	margin-bottom: 20%;
-	width: 150px;
-	height: 50px;
 }
 
 .kategorie {
