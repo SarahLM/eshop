@@ -33,3 +33,17 @@ th, td {
   text-align: left;
   padding: 15px;
 }
+
+
+/******* EMAIL INPUT FIELD und BUTTON ******/
+.email-input input {
+    width: 400px;
+}
+
+.email-input button {
+  height: 35px;
+}
+
+.fa {
+  margin-right: 10px;
+}
