@@ -4,7 +4,17 @@ var pgp = require("pg-promise")(/*options*/);
 var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:5432/webshopdatabase");
 
 function sendingMail(req, res, next){
-   
+   /*function sendingMail(req, res, next){
+
+
+
+
+                //creating Transporter Object
+
+        var transporter = nodemailer.createTransport({name:'localhost',tls: {
+        rejectUnauthorized: false
+    }})
+*/
 
 	var smtpConfig = {
 		    host: 'smtp.googlemail.com',
@@ -28,7 +38,8 @@ Herzlich Wilkommen neuer Mitarbeiter!</br>
 mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren.</div>*/
 	//var mailOptions = req.body.mailOptions;
 	var mailOptions = {
-    from: '"Onurs Bastelecke" <webshophtw@gmail.com>', // sender address
+    //from: '"Onurs Bastelecke" <webshophtw@gmail.com>', // sender address
+    from: 'Onurs Bastelecke'
     to: req.params.nutzer, // list of receivers
     subject: 'Registrierung✔', // Subject line
     //text: 'Hier kannst du dich registrieren ', // plaintext body
