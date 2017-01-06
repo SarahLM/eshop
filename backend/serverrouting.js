@@ -28,6 +28,7 @@ var registrierung = require('./registrierung.js')
 var auth = require('./auth.js')
 var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
+var getArticles = require('./getArticles.js')
 
 
 // respond with "hello world" when a GET request is made to the homepage
@@ -41,6 +42,9 @@ app.get('/home', function(req, res) {
 
 
  app.get('/registrierung/:id/:nutzer/:password', registrierung.registrierung);
+
+ //gibt einen Array mit Json-Objekten aller Artikel zurück
+ app.get('/allArticles', getArticles.getArticles);
 
  //app.post('/Mail', handlerMail.registerCustomer);
  app.get('/SendMail', mailerConfig.sendingMail);
