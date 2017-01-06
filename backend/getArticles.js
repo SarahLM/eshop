@@ -3,16 +3,6 @@ var app = express();
 var pgp = require("pg-promise")(/*options*/);
 var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:5432/webshopdatabase");
 
-/*function getArticles(req,res)
-{
-	
-    //db.any("SELECT array_to_json(array_agg(row_to_json(t))) FROM (SELECT * FROM article) t;")
-   return db.any("select info from jsontest where id =1");
-   
-    //res.send(result);  
-
-}*/
-
 
 function getArticles(req, res, next) {
   db.any('SELECT array_to_json(array_agg(row_to_json(t))) FROM (SELECT * FROM article) t')
@@ -27,10 +17,6 @@ function getArticles(req, res, next) {
       return next(err);
     });
 }
-
-
-
-
 
 //Für später Artikel einpflegen ein Post-Beispiel:
 /*function createPuppy(req, res, next) {
