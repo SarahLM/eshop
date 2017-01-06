@@ -19,11 +19,20 @@
 	transition: transform 1s ease;
 }
 
-@media screen and (max-width: 660px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .logo-class {
+	    width: 465px;
+      height: 80px;
+      -webkit-transition-transform: 1s ease;
+      transition: transform 1s ease;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
 	.logo-class {
-		height: 86px;
-		width: 465px;
-		-webkit-transition-transform: 1s ease;
-		transition: transform 1s ease;
+	    width: 370px;
+      height: 75px;
+      -webkit-transition-transform: 1s ease;
+      transition: transform 1s ease;
 	}
 }

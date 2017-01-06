@@ -1,0 +1,49 @@
+<div class="body">
+  <div class="dashboard">
+   <h2>
+   Produkt &Uuml;bersicht
+  </h2>
+  	<div class="dashboard-form">
+
+   			<h3>* Name: </h3>
+   			 <input class="productname" type="text" placeholder="Produktname eingeben" >
+    				<br>
+    			<div>
+   			 <h3>* Kategorie </h3>
+     			<select  class="kategorie" name="Kategorie">
+      <option value="papeterie">Papeterie</option>
+  	<option value="ordnen">Ordnen</option>
+  	<option value="schreibwaren">Schreibwaren</option>
+  	<option value="künstlerbedarf">K&uuml;nstlerbedarf</option>
+      <option value="basteln">Basteln</option>
+   			 </select>
+    <br>
+
+    </div>
+     <h3>* Details: </h3>
+    <input type="text" placeholder="Bitte die Details eingeben..." >
+     <h3>* Preis:  </h3>
+    <input type="text" placeholder="" >
+    <br><br>
+
+    <h3>
+    Zus&auml;tzliche Informationen:
+    </h3>
+    <br>
+
+  <form method="post" action="upload.php" enctype="multipart/form-data">
+     <h3> 
+    Datei:
+    </h3>
+    <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+    <input type="file" name="datei" size="40" maxlength="100000">
+
+
+    		<button id="primarybtn">abbrechen</button>
+    		<button id="primarybtn">speichern</button>
+
+  </form>
+
+  </div>
+
+</div>

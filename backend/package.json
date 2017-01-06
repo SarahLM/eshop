@@ -12,9 +12,8 @@
   "dependencies": {
     "express": "^4.14.0"
   },
-  "keywords":"express-authentication",
-    "peerDependencies": {
-        "express-authentication": "^0.3.0"
-}
-
+  "keywords": "express-authentication",
+  "peerDependencies": {
+    "express-authentication": "^0.3.0"
+  }
 }

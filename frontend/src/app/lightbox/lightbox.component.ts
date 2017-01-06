@@ -5,16 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './lightbox.component.html',
   styleUrls: ['./lightbox.component.css']
 })
-export class LightboxComponent implements OnInit {
+export class LightboxComponent{
 
- 	currentText: String = "hi";
-    show: boolean = false;
-
-    public clicked = () => {
-    	this.show = !this.show;
-	}
-
-	constructor() { 
+	constructor() {
 	}
 
 	ngOnInit() {

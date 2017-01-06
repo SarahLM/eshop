@@ -1,0 +1,24 @@
+.dashboard{
+  width:100%;
+}
+.dashboard-form{
+
+  text-align: left;
+  margin-top: 5px;
+}
+
+
+.productname{
+
+left: 300px;
+top: 303px;
+width: 90%;
+height: 40px;
+}
+
+.kategorie {
+	font-family: avenir;
+	font-size: 12px;
+	width: 20%;
+	height: 5%;
+}

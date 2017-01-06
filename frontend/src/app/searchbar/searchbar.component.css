@@ -7,10 +7,10 @@
 
 /****** INPUTFIELD ******/
 input[type="text"] {
-    width: 95%;
+    width: 80%;
     height: 40px;
     font-size: 14px;
-    border: none; 
+    border: none;
     padding: 0;
 }
 
@@ -19,6 +19,7 @@ input[type="submit"] {
     font-family: FontAwesome;
     font-size: 14px;
     color: #E9E9E9;
+    float: left;
 }
 
 .search {
@@ -32,9 +33,9 @@ input[type="submit"] {
 
 /****** AUTOCOMPLETE ******/
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
-input:-webkit-autofill, 
+input:-webkit-autofill,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover
 textarea:-webkit-autofill:focus,

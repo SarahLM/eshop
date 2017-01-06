@@ -1,15 +1,32 @@
 {
-   "article1" : {
-      "id" : 10101",
-      "name" : "Bleistift"
-   },
-   "article2" : {
-      "id : "12121",
-      "name" : "Tacker"
-   },
-   "article3" : {
-      "id" : "13131",
-      "name" : "Ringordner"
-   }
-}
+  "items": [
+    {
+        "id" : "000111",
+        "category": "Terminplaner",
+        "name" : "Mir reichts, ich gehe schaukeln 2017",
+        "preis": "€ 12,40",
+        "imgURL": ""
+     },
 
+    {
+        "id" : "000222",
+        "category": "Gelstifte",
+        "name" : "Eparon Gelschreiber",
+        "preis": "€ 15,99"
+    },
+
+    {
+        "id" : "000333",
+        "category": "Tintenroller",
+        "name" : "Pelikan Twist Tintenroller",
+        "preis": "€ 5,99"
+    },
+
+    {
+        "id" : "000444",
+        "category": "Radiergummis",
+        "name" : "Fast Food",
+        "preis": "€ 3,50"
+    }
+  ]
+}
