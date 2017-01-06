@@ -22,17 +22,19 @@ function sendingMail(req, res, next){
  var irgendwas = db.any("SELECT createInvitecode();").then( function(status){
 	
 	var coder = {code :status[0].createinvitecode}; 
+	console.log(coder.code);
 	/*var inhalt = <div>
 Herzlich Wilkommen neuer Mitarbeiter!</br>
 mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren.</div>*/
 	//var mailOptions = req.body.mailOptions;
 	var mailOptions = {
     from: '"Onurs Bastelecke" <webshophtw@gmail.com>', // sender address
-    to: 's.mendenhall@hotmail.de', // list of receivers
+    to: req.params.nutzer, // list of receivers
     subject: 'Registrierung✔', // Subject line
     //text: 'Hier kannst du dich registrieren ', // plaintext body
-    html: '<div>Herzlich Wilkommen neuer Mitarbeiter!mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren</div></br>'+' <a href="http://localhost:8080/registrierung/{{code}}"'+'>registrieren</a>' // html body
+    html: '<div>Herzlich Wilkommen neuer Mitarbeiter!mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren</div></br>'+' <a href="http://localhost:8080/registrierung/'+coder.code+'">registrieren</a>' // html body
 	};
+
 	transporter.sendMail(mailOptions, function(error, info){
 	    if(error){
 	        return console.log(error);

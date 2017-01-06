@@ -43,7 +43,7 @@ app.get('/home', function(req, res) {
  app.get('/registrierung/:id/:nutzer/:password', registrierung.registrierung);
 
  //app.post('/Mail', handlerMail.registerCustomer);
- app.get('/SendMail', mailerConfig.sendingMail);
+ app.get('/SendMail/:nutzer', mailerConfig.sendingMail);
 
  app.get('/auth', auth.api);
 
