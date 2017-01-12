@@ -1,0 +1,95 @@
+
+
+  .container {
+      width: 70%;
+    text-align: left;
+    display: inline-block;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20%;
+  }
+  
+  .progressbar {
+      counter-reset: step;
+      width: 100%;
+      float: left;
+  }
+  
+  .progressbar li {
+      list-style-type: none;
+      width: 25%;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #32845B;
+  }
+  
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+  
+  .progressbar li:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: #7d7d7d;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+  }
+  
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  
+  .progressbar li.active {
+      color: green;
+  }
+  
+  .progressbar li.active:before {
+      border-color: #32845B;
+  }
+  
+  .progressbar li.active + li:after {
+      background-color: #32845B;
+  }
+  
+  div.links {
+      float: left;
+      width: 50%;
+  }
+  
+  div.rechts {
+      float: right;
+      width: 50%;
+  }
+  
+  .chkbox-links {
+      float: left;
+      width: 10%;
+  }
+  
+  .text-rechts {
+      float: right;
+      width: 90%;
+  }
+  .btn-box{
+  text-align: center;
+}
+
+.body{
+	text-align: center;
+}
