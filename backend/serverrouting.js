@@ -18,6 +18,15 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan("dev"));
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    next();
+});
+
 //app.use(express.static(path.join(__dirname, 'static')));
 //var app = express();
 
@@ -30,6 +39,10 @@ var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
 
+//Authentifizierung
+app.post('/authenticate', Authentifizierung.authentifizieren);
+
+
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function(req, res) {
@@ -41,7 +54,7 @@ app.get('/home', function(req, res) {
 });
 
 
- app.get('/registrierung/:id/:nutzer/:password', registrierung.registrierung);
+ app.get('/registrierung/:id/:email/:password', registrierung.registrierung);
 
  //gibt einen Array mit Json-Objekten aller Artikel zurück
  app.get('/allArticles', getArticles.getArticles);

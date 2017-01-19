@@ -15,7 +15,10 @@ function sendingMail(req, res, next){
         rejectUnauthorized: false
     }})
 */
+var transporter = nodemailer.createTransport({name:'localhost',tls: {
+        rejectUnauthorized: false}})
 
+/*
 	var smtpConfig = {
 		    host: 'smtp.googlemail.com',
 		    port: 587,
@@ -28,7 +31,7 @@ function sendingMail(req, res, next){
 
 		//creating Transporter Object
 
-	var transporter = nodemailer.createTransport(smtpConfig)
+	var transporter = nodemailer.createTransport(smtpConfig)*/
  var irgendwas = db.any("SELECT createInvitecode();").then( function(status){
 	
 	var coder = {code :status[0].createinvitecode}; 
