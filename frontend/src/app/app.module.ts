@@ -24,6 +24,7 @@ import { ProductDivComponent } from './product-div/product-div.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { DashboardStartpageComponent } from './dashboard-startpage/dashboard-startpage.component';
 import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-productpage.component';
+import { RegistrationInfopageComponent} from './registration-infopage/registration-infopage.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-
     ProductDivComponent,
     ProductPageComponent,
     DashboardStartpageComponent,
-    DashboardProductpageComponent
+    DashboardProductpageComponent,
+    RegistrationInfopageComponent
   ],
   imports: [
     BrowserModule,
