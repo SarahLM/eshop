@@ -1,0 +1,75 @@
+<app-mainmenu xmlns="http://www.w3.org/1999/html"></app-mainmenu>
+
+<div class="body">
+  <h1>Warenkorb</h1>
+
+  <div class="cartProduct">
+    <div class="cartProduct-list">
+
+      <div class="cartProduct-listHead">
+        <div class="column span1"></div>
+        <!-- for item info column -->
+        <div class="column span1">
+          <span>Artikel</span>
+        </div>
+        <!-- for quantity column -->
+        <div class="column span1">
+          <span>Anzahl</span>
+        </div>
+        <!-- for single-price column -->
+        <div class="column span1">
+          <span>Preis</span>
+        </div>
+        <!-- for price column -->
+        <div class="column span1">
+          <span>Gesamtpreis</span>
+        </div>
+        <!-- for icon column -->
+        <div class="column span1"></div>
+      </div>
+
+      <div class="cartProduct-listBody">
+        <div class="column span1">
+          <a href="" class="img-wrapper"><img src="/assets/images/placeholder-img.png"></a>
+        </div>
+
+        <div class="cartProduct-listBodyInfo">
+          <!-- for item info column -->
+          <div class="column span2">
+            <div class="column-name"><span>Item name</span></div>
+            <div class="column-id"><span>#123456</span></div>
+            <div class="column-color"><span>Farbe: - </span></div>
+          </div>
+          <!-- for quantity column -->
+          <div class="column span2">
+            <select class="column-quantity">
+              <option value="volvo">1</option>
+              <option value="saab">2</option>
+              <option value="opel">3</option>
+              <option value="audi">4</option>
+            </select>
+          </div>
+          <!-- for single-price column -->
+          <div class="column span2">
+            <span class="column-price">00,00 €</span>
+          </div>
+          <div class="column span2">
+            <span class="column-pricesummary">00,00 €</span>
+          </div>
+          <div class="column span3">
+            <span class="column-icon fa fa-pencil"></span>
+            <span class="column-icon fa fa-trash"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="cartBtn">
+      <button>Weiter zur Kasse</button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 //import { Configuration } from '../_services/app.constants';
 
 import { ProductDivComponent } from '../product-div/product-div.component';
+import {CartPageComponent} from "../cart-page/cart-page.component";
 
 @Injectable()
 export class DataService {
@@ -28,7 +29,7 @@ export class DataService {
 
   public GetSingle = (id: number): Observable<ProductDivComponent> => {
        return this._http.get(this.actionUrl + id)
-           .map((response: Response) => <ProductDivComponent>response.json())
+           .map((response: Response) => <CartPageComponent>response.json())
            .catch(this.handleError);
    }
 

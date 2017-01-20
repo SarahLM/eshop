@@ -25,10 +25,12 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { DashboardStartpageComponent } from './dashboard-startpage/dashboard-startpage.component';
 import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-productpage.component';
 import { RegistrationInfopageComponent} from './registration-infopage/registration-infopage.component';
+import {CartPageComponent} from "./cart-page/cart-page.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    CartPageComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
