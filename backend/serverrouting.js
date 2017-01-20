@@ -39,7 +39,7 @@ var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
 
-//Authentifizierung
+//Authentifizierung ...
 //app.post('/authenticate', Authentifizierung.authentifizieren);
 
 
