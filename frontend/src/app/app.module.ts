@@ -25,6 +25,10 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { DashboardStartpageComponent } from './dashboard-startpage/dashboard-startpage.component';
 import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-productpage.component';
 import { RegistrationInfopageComponent} from './registration-infopage/registration-infopage.component';
+import { BestelluebersichtComponent } from './bestelluebersicht/bestelluebersicht.component';
+import { AdresspageComponent } from './adresspage/adresspage.component';
+import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { ThankspageComponent } from './thankspage/thankspage.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,12 @@ import { RegistrationInfopageComponent} from './registration-infopage/registrati
     ProductPageComponent,
     DashboardStartpageComponent,
     DashboardProductpageComponent,
-    RegistrationInfopageComponent
+    RegistrationInfopageComponent,
+    ThankspageComponent,
+    BestelluebersichtComponent,
+    PaymentpageComponent,
+    AdresspageComponent
+
   ],
   imports: [
     BrowserModule,

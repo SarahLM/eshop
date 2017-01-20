@@ -9,6 +9,11 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { DashboardStartpageComponent } from './dashboard-startpage/dashboard-startpage.component';
 import { DashboardProductpageComponent} from './dashboard-productpage/dashboard-productpage.component';
 import { RegistrationInfopageComponent} from './registration-infopage/registration-infopage.component';
+import { BestelluebersichtComponent } from './bestelluebersicht/bestelluebersicht.component';
+import { AdresspageComponent } from './adresspage/adresspage.component';
+import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { ThankspageComponent } from './thankspage/thankspage.component';
+
 
 //hier werden die Routes definiert
 export const routes: Routes = [
@@ -18,7 +23,11 @@ export const routes: Routes = [
   { path: 'product-page', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
-  { path: 'registration/registration-infopage', component: RegistrationInfopageComponent}
+  { path: 'registration/registration-infopage', component: RegistrationInfopageComponent},
+  { path: 'bestelluebersicht', component: BestelluebersichtComponent},
+  { path: 'bestelluebersicht/adresse', component: AdresspageComponent},
+  { path: 'bestelluebersicht/adresse/bezahlung', component: PaymentpageComponent},
+  { path: 'bestelluebersicht/adresse/bezahlung/danke', component: ThankspageComponent},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
