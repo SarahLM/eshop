@@ -21,12 +21,17 @@
 .nav ul,
 .nav .dropdown-content-inner {
   width: 90%;
-  max-width: 70em;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.nav .nav-item {
+.nav .nav-item,
+.nav .nav-itemCart {
   display: inline-block;
+}
+
+.nav-itemCart {
+  float: right;
 }
 
 .nav ul li a {
@@ -100,7 +105,7 @@
   .nav {
     width:100%;
   }
-  .nav-item {
+  .nav-item, .nav-itemCart {
     width:100%;
   }
 }

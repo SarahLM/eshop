@@ -29,10 +29,12 @@ import { BestelluebersichtComponent } from './bestelluebersicht/bestelluebersich
 import { AdresspageComponent } from './adresspage/adresspage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ThankspageComponent } from './thankspage/thankspage.component';
+import { CartPageComponent } from "./cart-page/cart-page.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    CartPageComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,

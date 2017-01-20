@@ -13,21 +13,23 @@ import { BestelluebersichtComponent } from './bestelluebersicht/bestelluebersich
 import { AdresspageComponent } from './adresspage/adresspage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ThankspageComponent } from './thankspage/thankspage.component';
+import {CartPageComponent} from "./cart-page/cart-page.component";
 
 
 //hier werden die Routes definiert
 export const routes: Routes = [
   { path: '', component: StartpageComponent },
+  { path: 'cart', component: CartPageComponent },
   { path: 'login', component: LoginComponent	},
   { path: 'registration', component: RegistrationComponent	},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
   { path: 'registration/registration-infopage', component: RegistrationInfopageComponent},
-  { path: 'bestelluebersicht', component: BestelluebersichtComponent},
-  { path: 'bestelluebersicht/adresse', component: AdresspageComponent},
-  { path: 'bestelluebersicht/adresse/bezahlung', component: PaymentpageComponent},
-  { path: 'bestelluebersicht/adresse/bezahlung/danke', component: ThankspageComponent},
+  { path: 'cart/bestelluebersicht', component: BestelluebersichtComponent},
+  { path: 'cart/bestelluebersicht/adresse', component: AdresspageComponent},
+  { path: 'cart/bestelluebersicht/adresse/bezahlung', component: PaymentpageComponent},
+  { path: 'cart/bestelluebersicht/adresse/bezahlung/danke', component: ThankspageComponent},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
