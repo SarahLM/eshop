@@ -12,8 +12,6 @@ import { DashboardProductpageComponent } from '../dashboard-productpage/dashboar
 })
 export class DashboardStartpageComponent {
 
-  
-
   constructor( private http: Http ) {
 
   }
