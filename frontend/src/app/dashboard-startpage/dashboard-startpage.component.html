@@ -5,11 +5,17 @@
 
 			<h1>Neuen Mitarbeiter einladen</h1>
 				<div class="send-email" data-success="Eine Email ist gesendet">
-					<div class="email-input">
-						<input id="email-input" type="email" placeholder="">
-						<button><span class="fa fa-envelope"></span>send email</button>
-					</div>
-					</div>
+					<!--<div class="email-input">-->
+					<form #f="ngForm" (ngSubmit)="sendMail(f)">
+						<div class="form-group">
+
+							<input name="mail" id="mail" type="email" placeholder="" required ngModel>
+							<button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>send email</button>
+
+						</div>
+
+					</form>
+
 				</div>
 
 			<h1>Produkte</h1>

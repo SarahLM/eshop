@@ -43,7 +43,7 @@ mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeite
     to: req.params.nutzer, // list of receivers
     subject: 'Registrierung✔', // Subject line
     //text: 'Hier kannst du dich registrieren ', // plaintext body
-    html: '<div>Herzlich Wilkommen neuer Mitarbeiter!mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren</div></br>'+' <a href="http://localhost:8080/registrierung/'+coder.code+'">registrieren</a>' // html body
+    html: '<div>Herzlich Wilkommen neuer Mitarbeiter!mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren</div></br>'+' <a href="http://projektwebshop.f4.htw-berlin.de:4200/registrierung/'+coder.code+'">registrieren</a>' // html body
         };
 
         transporter.sendMail(mailOptions, function(error, info){
