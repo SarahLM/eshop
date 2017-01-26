@@ -2,14 +2,16 @@
 	<h3>WELCOME TO THE MITARBEITER-BEREICH!</h3>
 	<p>Dieser Bereich steht nur den Mitarbeitern der Onurs Bastelecke zur Verfügung</p>
 
-	<div class="form">
+	<!--<div class="form">-->
+  <div class="form">
   		<h2>Als Mitarbeiter registrieren</h2>
-    	<form class="register-form">
-      		<input type="text" placeholder="invite-code angeben"/>
-      		<input type="text" placeholder="email angeben"/>
-      		<input type="password" placeholder="password angeben"/>
+    	<form #f="ngForm" (ngSubmit)="registrierungSenden(f)"class="register-form">
+      		<input type="text" name="id" placeholder="invite-code angeben" id="id" value={{id}} />
+      		<input type="text" name="emailinput" placeholder="email angeben" id="emailinput" required ngModel/>
+
+      		<input type="password" name="passwordinput" placeholder="password angeben" id="passwordinput" required ngModel/>
       		<p class="secondarymsg"><a href="#">Passwort vergessen?</a></p>
-      		<button id="primarybtn">sich registrieren</button>
+      		<button id="primarybtn" type="submit" [disabled]="!f.valid">sich registrieren</button>
    		</form>
 	</div>
 

@@ -9,10 +9,10 @@ function registrierung(req,res){
         // success;
         console.log(status[0].auth);
         if (status[0].auth){
-        db.none("INSERT INTO employee(name,password) VALUES($1,$2)",[req.params.nutzer,req.params.password])
-        console.log('daten drin');
+        db.none("INSERT INTO employee(name,password) VALUES($1,$2)",[req.params.email,req.params.password])
         res.status(200).send('Benutzer registriert');
         console.log('daten drin');
+        console.log(req)
     }
         else res.send("Code wurde bereits verwendet");
     }).catch(function (error) {

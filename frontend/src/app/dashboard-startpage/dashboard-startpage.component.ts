@@ -20,9 +20,15 @@ export class DashboardStartpageComponent {
   	let mailReceiver = form.value.mail;
   	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/SendMail/' + mailReceiver).toPromise()
 	.then((res: Response) => {
-    	//this.friendsAsPromise.friends = res.json().friends;
     	console.log(res);
 	});
+
+//this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/allArticles').toPromise()
+//	.then((res: Response) => {
+//    	console.log(res.data);
+//	});
+
+// http://stackoverflow.com/questions/36749153/how-to-i-load-json-data-into-angular2-component
 
   }
 

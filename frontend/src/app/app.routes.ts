@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: '', component: StartpageComponent },
   { path: 'cart', component: CartPageComponent },
   { path: 'login', component: LoginComponent	},
-  { path: 'registration', component: RegistrationComponent	},
+  { path: 'registration/:id', component: RegistrationComponent	},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
