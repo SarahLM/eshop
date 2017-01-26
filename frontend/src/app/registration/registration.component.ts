@@ -22,7 +22,7 @@ registrierungSenden(form: NgForm) {
   	let invite = this.id;
   	let email = form.value.emailinput;
   	let password = form.value.passwordinput;
-  	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/registrierung/' + invite+'/' + email +'/'+ password).toPromise()
+  	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/registration/' + invite+'/' + email +'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
 	});
