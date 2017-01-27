@@ -14,6 +14,9 @@ import { AdresspageComponent } from './adresspage/adresspage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ThankspageComponent } from './thankspage/thankspage.component';
 import {CartPageComponent} from "./cart-page/cart-page.component";
+import { KontaktComponent } from "./kontakt/kontakt.component";
+import { ImpressumComponent} from "./impressum/impressum.component";
+import { AboutusComponent } from "./aboutus/aboutus.component";
 
 
 //hier werden die Routes definiert
@@ -30,6 +33,9 @@ export const routes: Routes = [
   { path: 'cart/bestelluebersicht/adresse', component: AdresspageComponent},
   { path: 'cart/bestelluebersicht/adresse/bezahlung', component: PaymentpageComponent},
   { path: 'cart/bestelluebersicht/adresse/bezahlung/danke', component: ThankspageComponent},
+  { path: 'contact', component: KontaktComponent},
+  { path: 'impressum', component: ImpressumComponent},
+  { path: 'aboutus', component: AboutusComponent},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

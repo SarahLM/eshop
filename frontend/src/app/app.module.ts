@@ -30,6 +30,9 @@ import { AdresspageComponent } from './adresspage/adresspage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ThankspageComponent } from './thankspage/thankspage.component';
 import { CartPageComponent } from "./cart-page/cart-page.component";
+import { ImpressumComponent } from './impressum/impressum.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { CartPageComponent } from "./cart-page/cart-page.component";
     ThankspageComponent,
     BestelluebersichtComponent,
     PaymentpageComponent,
-    AdresspageComponent
+    AdresspageComponent,
+    ImpressumComponent,
+    KontaktComponent,
+    AboutusComponent
 
   ],
   imports: [
