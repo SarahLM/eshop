@@ -2,7 +2,8 @@
 @import '../node_modules/font-awesome/css/font-awesome.css';
 
 html, body {
-	font-family: 'Avenir';
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-stretch: extra-expanded;
 	height: 100%;
 }
 
@@ -54,7 +55,7 @@ a {
 
 /************ BUTTON ************/
 button {
-	font-family: 'Avenir';
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 13px;
 	text-transform: uppercase;
 	background-color: #32845B;
@@ -65,7 +66,7 @@ button {
 	cursor: pointer;
 }
 button:hover, button:active, button:focus {
-	font-family: 'Avenir';
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	background: #FFFFFF;
 	text-transform: uppercase;
 	border: 1px solid #006633;
@@ -73,7 +74,7 @@ button:hover, button:active, button:focus {
 }
 /************* INPUT ************/
 input {
-	font-family: 'Avenir';
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 12px;
 	outline: 0;
   	background: #FFFFFF;

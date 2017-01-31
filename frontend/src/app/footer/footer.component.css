@@ -24,7 +24,7 @@ li {
 }
 a {
 	font-size: 12px;
-	font-family: 'Avenir';
+	font-family: 'Yanone Kaffeesatz', sans-serif;
   text-decoration: none;
 	color: #5A9C7B;
 	transition: all 0.5s ease-in-out;
