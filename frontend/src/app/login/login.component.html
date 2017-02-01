@@ -4,9 +4,9 @@
 
 	<div class="form">
   		<h2>Als Mitarbeiter anmelden</h2>
-    	<form class="register-form">
-      		<input type="text" placeholder="email angeben"/>
-      		<input type="password" placeholder="password angeben"/>
+      <form #f="ngForm" (ngSubmit)="loginSenden(f)"class="register-form">
+      		<input name="username" type="text" placeholder="email angeben" required ngModel/>
+      		<input name="password" type="password" placeholder="password angeben"required ngModel/>
       		<p class="secondarymsg"><a href="#">Passwort vergessen?</a></p>
       		<button id="primarybtn">anmelden</button>
    		</form>

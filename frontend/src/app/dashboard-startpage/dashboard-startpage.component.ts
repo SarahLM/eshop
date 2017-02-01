@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http'
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
+import {productService} from '../_services/productService';
+
 import { NgForm } from '@angular/forms';
 import { DashboardProductpageComponent } from '../dashboard-productpage/dashboard-productpage.component';
 
@@ -10,9 +13,9 @@ import { DashboardProductpageComponent } from '../dashboard-productpage/dashboar
   	templateUrl: './dashboard-startpage.component.html',
   	styleUrls: ['./dashboard-startpage.component.css']
 })
-export class DashboardStartpageComponent {
+export class DashboardStartpageComponent implements OnInit{
 
-  constructor( private http: Http ) {
+  constructor( private http: Http, private _productService: productService ) {
 
   }
 
@@ -23,13 +26,17 @@ export class DashboardStartpageComponent {
     	console.log(res);
 	});
 
-//this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/allArticles').toPromise()
-//	.then((res: Response) => {
-//    	console.log(res.data);
-//	});
+  products = [];
+
+ngOnInit(){
+  
+this._productService.allProducts().subscribe(resproductService => this.products = resproductService);
+}
+
+}
 
 // http://stackoverflow.com/questions/36749153/how-to-i-load-json-data-into-angular2-component
 
   }
 
- }
+ 

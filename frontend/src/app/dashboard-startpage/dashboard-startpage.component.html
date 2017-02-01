@@ -34,6 +34,14 @@
 					 <button id="product_add" routerLink="add-product">Produkt hinzuf&uuml;gen</button>
 				</form>
 
+				<h2>liste producte</h2>
+				<ul *ngFor="let product of products" required ngModel>
+						<li>{{product.id}}</li>
+						<li>{{product.color}}</li>
+
+						<li>{{product.category}}</li>
+
+
 				<table>
 					<tr>
 						<th>Produktname</th>

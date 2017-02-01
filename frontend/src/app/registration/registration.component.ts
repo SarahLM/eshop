@@ -12,6 +12,7 @@ import { Http, Response } from '@angular/http'
 export class RegistrationComponent implements OnInit {
 
    id : string;
+   
   constructor(private route : ActivatedRoute,private http: Http ) {
 
     this.id = route.snapshot.params['id'];

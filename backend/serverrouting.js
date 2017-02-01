@@ -44,7 +44,7 @@ app.use(function(req, res, next) {
 
 var registrierung = require('./registrierung.js')
 var auth = require('./auth.js')
-var authe = require('./authe.js')
+//var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
 
@@ -62,6 +62,7 @@ app.get('/home', function(req, res) {
   res.sendfile('static/index.html');
 });
 
+// app.get('/login/:username/:password',login.login);
 
  app.get('/registrierung/:id/:email/:password', registrierung.registrierung);
 
@@ -73,6 +74,6 @@ app.get('/home', function(req, res) {
 
  app.get('/auth', auth.api);
 
- app.get('/authe',authe.authe);
+// app.get('/authe',authe.authe);
 
 var server = app.listen(8080, function() {})
