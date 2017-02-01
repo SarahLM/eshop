@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 //import { HTTP_PROVIDERS } from '@angular2/http';
 
 import { DashboardProductpageComponent } from '../dashboard-productpage/dashboard-productpage.component';
-
+import { ProductDivComponent } from '../product-div/product-div.component';
 
 @Component({
  	selector: 'app-dashboard-startpage',
@@ -16,33 +16,25 @@ import { DashboardProductpageComponent } from '../dashboard-productpage/dashboar
   	styleUrls: ['./dashboard-startpage.component.css'],
     //providers: [dataService, HTTP_PROVIDERS]
 })
-export class DashboardStartpageComponent 
-//implements OnInit
-{
+export class DashboardStartpageComponent implements OnInit {
 
-constructor(private http: Http, private _dataService: dataService) {
- 
- this._dataService.GetAll()
+  public myItems: ProductDivComponent [];
 
+  constructor(private http: Http, private _dataService: dataService) { }
+
+  ngOnInit() {
+    this.getAllItems();
+    console.log(this.myItems);
   }
-  
-  products = [];
 
-  GetAll() {
-    this._dataService.GetAll()
-        .subscribe(
-            products => this.products = products,
-            error =>  console.error('Error: ' + error)
-         );
-     }
-
-
-//products = [];
-
-  //constructor( private http: Http, private dataService: dataService ) {
-
-
-  //}
+  private getAllItems(): void {
+        this._dataService
+            .GetAll()
+            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
+                error => console.log(error),
+                () => console.log(this.myItems));
+    }
+ 
 
   sendMail(form: NgForm) {
   	let mailReceiver = form.value.mail;
@@ -50,11 +42,40 @@ constructor(private http: Http, private _dataService: dataService) {
 	.then((res: Response) => {
     	console.log(res);
 	});
+};
+
+  searchProducts(form: NgForm) {
+    
+        this._dataService
+            .SearchProducts(form.value.search, form.value.auswahl)
+            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
+                error => console.log(error),
+                () => console.log(this.myItems));
+    // 
 
   }
 
-};
+  modifyProduct(item: ProductDivComponent) {
 
+    // Schritt 1: das übergebene item in eine Form zum bearbeiten laden
+    // Vorgehensweise in Angular 1 ähnlich der untenstehenden
+
+    // Schritt 2: In dieser Form alle Elemente anzeigen und bearbeiten lassen (außer ID)
+    // Anschließend den ganzen Datensatz an eine Methode übergeben, siehe Beispiel searchProducts oben.
+
+    // Schritt 3: In dieser Methode den Aufruf Update in dataService.ts ausführen
+    // ID des Datensatz und kompletten Datensatz übergeben
+
+    // Schritt 4: Im Backend die URL http://localhost:8080/{id} per PUT integrieren
+    // Datensatz mit der übergebenen ID aufrufen und mit aktuellen Daten überschreiben
+
+    //this.item = item;
+console.log(item);
+    
+
+
+};
+}
 //ngOnInit(){
   
 //};

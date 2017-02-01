@@ -18,12 +18,14 @@
 
 				</div>
 
+
+
 			<h1>Produkte</h1>
 
 			<div id="droplist" class="search">
-				<form>
-					<input id="search_field" type="text" name="search" placeholder="Hier suchen.." />
-					<select>
+				<form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
+					<input id="search_field" type="text" name="search" placeholder="Hier suchen.." required ngModel>
+					<select name="auswahl" required ngModel>
 						<option>Alle Produkte</option>
 						<option>Papeterie</option>
 						<option>Ordnen</option>
@@ -31,11 +33,8 @@
 						<option>Basteln</option>
 					</select>
 					 <button id="search_btn" type="submit" value="Suchen">Suchen</button>
-					 <button id="product_add" routerLink="add-product">Produkt hinzuf&uuml;gen</button>
+					<button id="product_add" routerLink="add-product">Produkt hinzuf&uuml;gen</button>
 				</form>
-
-				
-
 
 				<table>
 					<tr>
@@ -46,60 +45,11 @@
 						<th></th>
 					<tr>
 
-				   <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				    <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				    <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				    <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				    <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				    <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-						  <td>Bearbeiten</td>
-						  <td>L&ouml;schen</td>
-				   </tr>
-				      <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-					  <td>Bearbeiten</td>
-					  <td>L&ouml;schen</td>
-				   </tr>
-				      <tr>
-				      <td>Bleisift</td>
-				      <td>Schreibwaren</td>
-				      <td>Euro</td>
-					  <td>Bearbeiten</td>
+				   <tr *ngFor="let item of myItems">
+				      <td>{{item.name}}</td>
+				      <td>{{item.category}}</td>
+				      <td>{{item.price}}</td>
+					  <td><button (click)="modifyProduct(item)">Bearbeiten</button></td>
 					  <td>L&ouml;schen</td>
 				   </tr>
 

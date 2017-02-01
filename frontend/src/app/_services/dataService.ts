@@ -29,6 +29,22 @@ export class dataService {
             .catch(this.handleError);
   }
 
+  public SearchProducts = (search: string, auswahl: string): Observable<ProductDivComponent[]> => {
+    console.log(search + " aus dataService.")
+    return this._http.get(this.actionUrl+"/allArticles")
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }
+
+ /* public GetAllDash = (): Observable<DashboardStartpageComponent[]> => {
+    return this._http.get(this.actionUrl+"/allArticles")
+            //.map((response: Response) => <ProductDivComponent[]>response.json().items)
+            .map((response: Response) => <DashboardStartpageComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }*/
+
   public GetSingle = (id: number): Observable<ProductDivComponent> => {
        return this._http.get(this.actionUrl + id)
            .map((response: Response) => <CartPageComponent>response.json())
