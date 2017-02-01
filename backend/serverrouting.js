@@ -62,6 +62,8 @@ app.get('/home', function(req, res) {
   res.sendfile('static/index.html');
 });
 
+ app.get('/category/:category',getArticles.getArticlesfromCategory);
+ 
  app.get('/login/:username/:password',login.login);
 
  app.get('/registrierung/:id/:email/:password', registrierung.registrierung);

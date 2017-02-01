@@ -4,6 +4,24 @@
 	 		<a>PAPETERIE</a>
 		 	<div class="dropdown-content">
 		 		<div class="dropdown-content-inner">
+
+		<form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
+
+<div *ngFor="let item of myItems">
+      <a class="link">
+        <h3 name="auswahl" required ngModel>Kalender</h3>
+
+        <h3 class="product-category-title">{{item.name}}</h3>
+      </a>
+      				
+
+    </div>
+
+</form>
+
+
+
+
 		 			<div>
 						<h3>Kalender und Terminplaner</h3>
 					    <ul>

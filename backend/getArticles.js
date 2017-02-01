@@ -18,6 +18,25 @@ function getArticles(req, res, next) {
     });
 }
 
+
+function getArticlesfromCategory(req,res,next){
+
+
+db.any("SELECT * from Article where category='"+req.params.category+"';")
+    .then(function (data) {
+      res.status(200)
+        .json({
+          
+          data
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+
+
+
+}
 //Für später Artikel einpflegen ein Post-Beispiel:
 /*function createPuppy(req, res, next) {
   req.body.age = parseInt(req.body.age);
@@ -38,5 +57,7 @@ function getArticles(req, res, next) {
 
 
 module.exports = {
-	getArticles: getArticles
+	getArticles: getArticles,
+  getArticlesfromCategory : getArticlesfromCategory
+
 }

@@ -31,7 +31,7 @@ export class dataService {
 
   public SearchProducts = (search: string, auswahl: string): Observable<ProductDivComponent[]> => {
     console.log(search + " aus dataService.")
-    return this._http.get(this.actionUrl+"/allArticles")
+    return this._http.get(this.actionUrl+"/category/"+auswahl)
             .map((response: Response) => <ProductDivComponent[]>response.json().data)
 
             .catch(this.handleError);
