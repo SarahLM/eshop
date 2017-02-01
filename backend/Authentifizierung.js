@@ -7,6 +7,7 @@ var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:
 
 
 authentifizierung function(req, res) {
+    //db.any("SELECT login('"+req.params.username+"','"+req.params.password+"');")
     User.findOne({email: req.body.email, password: req.body.password}, function(err, user) {
         if (err) {
             res.json({

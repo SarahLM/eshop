@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http'
+import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
+//import {productService} from '../_services/productService';
+import {dataService} from '../_services/dataService';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: Http) { }
 
 
   loginSenden(form: NgForm) {

@@ -5,7 +5,7 @@ var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:
 
 
 function getArticles(req, res, next) {
-  db.any('SELECT array_to_json(array_agg(row_to_json(t))) FROM (SELECT * FROM article) t')
+  db.any('SELECT getAllArticles();')
     .then(function (data) {
       res.status(200)
         .json({

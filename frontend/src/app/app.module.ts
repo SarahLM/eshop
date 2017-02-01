@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { DataService } from './_services/dataService';
+import { dataService } from './_services/dataService';
 import { routing } from './app.routes';
 
 //import { AuthenticationService, UserService } from './_services/index';
@@ -67,7 +67,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     HttpModule,
     routing
   ],
-  providers: [DataService],
+  providers: [dataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../_services/dataService';
+import { dataService } from '../_services/dataService';
 import { ProductDivComponent } from '../product-div/product-div.component';
 
 
@@ -7,7 +7,7 @@ import { ProductDivComponent } from '../product-div/product-div.component';
   selector: 'app-startpage',
   templateUrl: './startpage.component.html',
   styleUrls: ['./startpage.component.css'],
-  providers: [DataService]
+  providers: [dataService]
 })
 
 export class StartpageComponent implements OnInit {

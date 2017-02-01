@@ -47,7 +47,7 @@ var auth = require('./auth.js')
 //var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
-
+var login = require ('./login.js')
 //Authentifizierung ...
 //app.post('/authenticate', Authentifizierung.authentifizieren);
 
@@ -62,7 +62,7 @@ app.get('/home', function(req, res) {
   res.sendfile('static/index.html');
 });
 
-// app.get('/login/:username/:password',login.login);
+ app.get('/login/:username/:password',login.login);
 
  app.get('/registrierung/:id/:email/:password', registrierung.registrierung);
 

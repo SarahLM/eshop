@@ -10,20 +10,22 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 import {CartPageComponent} from "../cart-page/cart-page.component";
 
 @Injectable()
-export class DataService {
+export class dataService {
   private actionUrl: string;
   private headers: Headers;
 
   constructor(private _http: Http) {
-    this.actionUrl = "http://localhost:8081/test";
+    this.actionUrl = "http://localhost:8080";
 
     //this.headers.append('Content-Type', 'application/json');
     //this.headers.append('Accept', 'application/json');
   }
 
   public GetAll = (): Observable<ProductDivComponent[]> => {
-    return this._http.get(this.actionUrl)
-            .map((response: Response) => <ProductDivComponent[]>response.json().items)
+    return this._http.get(this.actionUrl+"/allArticles")
+            //.map((response: Response) => <ProductDivComponent[]>response.json().items)
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
             .catch(this.handleError);
   }
 
