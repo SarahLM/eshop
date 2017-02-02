@@ -1,49 +1,32 @@
+
 <nav class="nav">
+
 	<ul class="first-ul">
 	 	<li class="nav-item">
-	 		<a>PAPETERIE</a>
+
+<form #searchForm="ngForm"  (ngSubmit)="showProducts(searchForm)">
+
+	 		<a id="auswahl"  required ngModel>Papeterie</a>
 		 	<div class="dropdown-content">
 		 		<div class="dropdown-content-inner">
 
-		<form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
+        <h3 name='auswahl' value='Papeterie'>Kalender</h3>
 
 <div *ngFor="let item of myItems">
-      <a class="link">
-        <h3 name="auswahl" required ngModel>Kalender</h3>
+      
 
-        <h3 class="product-category-title">{{item.name}}</h3>
-      </a>
+        <h3>{{item.name}}</h3>
+      
       				
 
     </div>
 
-</form>
 
 
-
-
-		 			<div>
-						<h3>Kalender und Terminplaner</h3>
-					    <ul>
-					   		<li><a href="http://localhost:4200/product-page">Artikel 1</a></li>
-							<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Papier</h3>
-					    <ul>
-						   	<li><a href="#">Artikel 1</a></li>
-						  	<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-					  	</ul>
-					</div>
 				</div>
 	    	</div>
+	    	</form>
+
 	    </li> <!-- E PAPETERIE -->
 	 	<li class="nav-item">
 	 		<a>ORDNEN</a>

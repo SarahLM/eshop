@@ -37,16 +37,17 @@ export class MainmenuComponent implements OnInit {
 
  
 
-  searchProducts(form: NgForm) {
+  showProducts(form: NgForm) {
     
         this._dataService
-            .SearchProducts(form.value.search, form.value.auswahl)
+            .ShowProducts(form.value.auswahl)
             .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
                 error => console.log(error),
                 () => console.log(this.myItems));
     // 
 
   }
+
 
   
 }

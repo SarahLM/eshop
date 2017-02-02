@@ -37,6 +37,14 @@ export class dataService {
             .catch(this.handleError);
   }
 
+  public ShowProducts = (auswahl: string): Observable<ProductDivComponent[]> => {
+    console.log(auswahl + " aus dataService.")
+    return this._http.get(this.actionUrl+"/category/"+auswahl)
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }
+
  /* public GetAllDash = (): Observable<DashboardStartpageComponent[]> => {
     return this._http.get(this.actionUrl+"/allArticles")
             //.map((response: Response) => <ProductDivComponent[]>response.json().items)
