@@ -18,6 +18,8 @@ export class MainmenuComponent implements OnInit {
 
 
   public myItems: ProductDivComponent [];
+    public myItem: ProductDivComponent [];
+
 
   constructor(private http: Http, private _dataService: dataService) { }
 
@@ -37,13 +39,13 @@ export class MainmenuComponent implements OnInit {
 
  
 
-  showProducts(form: NgForm) {
+  showProducts(categoryName : string) {
     
         this._dataService
-            .ShowProducts(form.value.auswahl)
-            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
+            .ShowProducts(categoryName)
+            .subscribe((myItem:ProductDivComponent[]) => this.myItem = myItem,
                 error => console.log(error),
-                () => console.log(this.myItems));
+                () => console.log(this.myItem));
     // 
 
   }

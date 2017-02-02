@@ -4,15 +4,14 @@
 	<ul class="first-ul">
 	 	<li class="nav-item">
 
-<form #searchForm="ngForm"  (ngSubmit)="showProducts(searchForm)">
+        <a href ="javascript:void(0)" (click)="showProducts('Ordnen')">PAPETERIE</a>
 
-	 		<a id="auswahl"  required ngModel>Papeterie</a>
 		 	<div class="dropdown-content">
 		 		<div class="dropdown-content-inner">
 
-        <h3 name='auswahl' value='Papeterie'>Kalender</h3>
+        <h3>Kalender</h3>
 
-<div *ngFor="let item of myItems">
+<div *ngFor="let item of myItem">
       
 
         <h3>{{item.name}}</h3>
@@ -25,7 +24,7 @@
 
 				</div>
 	    	</div>
-	    	</form>
+	    	
 
 	    </li> <!-- E PAPETERIE -->
 	 	<li class="nav-item">
