@@ -5,13 +5,9 @@ basicAuth = require('basic-auth'),
 app = express();
 
 var nodemailer = require('nodemailer');
-
 var path = require('path');
-//var favicon = require('serve-favicon');
-//var logger = require('morgan');
-//var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//require('dotenv').config();
+
 
 
 app.all("*", function (req, res, next) {
@@ -28,13 +24,7 @@ app.all("*", function (req, res, next) {
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
-/*app.use(morgan("dev"));
-app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-    next();
-});*/
+
 
 //app.use(express.static(path.join(__dirname, 'static')));
 //var app = express();
@@ -44,6 +34,8 @@ app.use(function(req, res, next) {
 
 var registrierung = require('./registrierung.js')
 var auth = require('./auth.js')
+var putArticle = require('./putArticle.js')
+
 //var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
@@ -62,6 +54,11 @@ app.get('/', function(req, res) {
 app.get('/home', function(req, res) {
   res.sendfile('static/index.html');
 });
+ // app.post('/putArticle/:id/:name/:color/:category/:subcategory/:beschreibung/:preis/:vorrat',putArticle.putArticle);
+
+ app.post('/putArticle',putArticle.putArticle);
+
+ app.post('/deleteArticle/:id',putArticle.deleteArticle);
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
  

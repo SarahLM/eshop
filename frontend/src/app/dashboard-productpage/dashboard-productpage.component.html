@@ -4,32 +4,79 @@
    Produkt &Uuml;bersicht
   </h2>
   	<div class="dashboard-form">
+          <form #f="ngForm" (ngSubmit)="putArticle(f)">
 
    			<h3>* Name: </h3>
-   			 <input class="productname" type="text" placeholder="Produktname eingeben" >
+   			 <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required ngModel >
     				<br>
+            <h3>* ID: </h3>
+         <input id="productname" name="productid" type="text" placeholder="Produktname eingeben" required ngModel>
+            <br>
     			<div>
    			 <h3>* Kategorie </h3>
-     			<select  class="kategorie" name="Kategorie">
-      <option value="papeterie">Papeterie</option>
-  	<option value="ordnen">Ordnen</option>
-  	<option value="schreibwaren">Schreibwaren</option>
-  	<option value="künstlerbedarf">K&uuml;nstlerbedarf</option>
-      <option value="basteln">Basteln</option>
+     			<select  id="productname" name="kategorie" required ngModel>
+      <option value="Papeterie">Papeterie</option>
+  	<option value="Ordnen">Ordnen</option>
+  	<option value="Schreibwaren">Schreibwaren</option>
+  	<option value="Künstlerbedarf">K&uuml;nstlerbedarf</option>
+      <option value="Basteln">Basteln</option>
    			 </select>
     <br>
+    <h3>* Farbe </h3>
+          <select  id="productname" name="color" required ngModel>
+      <option value="Schwarz">Schwarz</option>
+    <option value="Rot">Rot</option>
+    <option value="Blau">Blau</option>
+    <option value="Grün">Grün</option>
+      <option value="Gelb">Gelb</option>
+            <option value="Bunt">Bunt</option>
+                  <option value="Braun">Braun</option>
+                        <option value="Transparent">Transparent</option>
+                              <option value="Weiß">Weiß</option>
 
+
+
+
+         </select>
+
+         <br>
+    <h3>* SubKategorie </h3>
+          <select  id="productname" name="subkategorie" required ngModel>
+      <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
+    <option value="Ordner">Ordnen</option>
+    <option value="Hefter">Hefter</option>
+    <option value="Papier">Papier</option>
+      <option value="Kleber">Kleber</option>
+            <option value="Korrigieren">Korrigieren</option>
+                  <option value="Werkzeuge">Werkzeugt</option>
+                        <option value="Schreibgeräte">Schreibgeräte</option>
+                              <option value="Malen&Zeichnen">Malen&Zeichnen</option>
+
+
+
+
+         </select>
+    <br>
     </div>
      <h3>* Details: </h3>
-    <input type="text" placeholder="Bitte die Details eingeben..." >
+    <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required ngModel >
      <h3>* Preis:  </h3>
-    <input type="text" placeholder="" >
-    <br><br>
+    <input id="productname" name="preis" type="text" placeholder="" required ngModel>
+    <br>
+    <h3>* Anzahl:  </h3>
+
+    <input id="productname" name="anzahl" type="text" placeholder="" required ngModel>
+
+    <br>
 
     <h3>
     Zus&auml;tzliche Informationen:
     </h3>
     <br>
+  <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
+  <button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>abbrechen</button>
+
+  </form>
 
   <form method="post" action="upload.php" enctype="multipart/form-data">
      <h3> 

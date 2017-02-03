@@ -19,6 +19,7 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 export class DashboardStartpageComponent implements OnInit {
 
   public myItems: ProductDivComponent [];
+  public showSuccess: boolean;
 
   constructor(private http: Http, private _dataService: dataService) { }
 
@@ -40,8 +41,10 @@ export class DashboardStartpageComponent implements OnInit {
   	let mailReceiver = form.value.mail;
   	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/SendMail/' + mailReceiver).toPromise()
 	.then((res: Response) => {
-    	console.log(res);
+    	this.showSuccess = res["_body"] == "OK";
+      if (this.showSuccess) form.reset();
 	});
+
 };
 
   searchProducts(form: NgForm) {
