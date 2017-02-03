@@ -35,6 +35,25 @@ db.any("SELECT * from Article where category='"+req.params.category+"';")
     });
 
 
+}
+
+
+function getArticlesfromSubCategory(req,res,next){
+
+
+db.any("SELECT * from Article where subcategory='"+req.params.subcategory+"';")
+    .then(function (data) {
+      res.status(200)
+        .json({
+          
+          data
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+
+
 
 }
 //Für später Artikel einpflegen ein Post-Beispiel:
@@ -58,6 +77,6 @@ db.any("SELECT * from Article where category='"+req.params.category+"';")
 
 module.exports = {
 	getArticles: getArticles,
-  getArticlesfromCategory : getArticlesfromCategory
-
+  getArticlesfromCategory : getArticlesfromCategory,
+  getArticlesfromSubCategory : getArticlesfromSubCategory
 }

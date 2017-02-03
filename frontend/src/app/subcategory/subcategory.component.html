@@ -1,0 +1,21 @@
+<app-mainmenu></app-mainmenu>
+
+<div class="body">
+  <app-searchbar></app-searchbar>
+
+<section>
+    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
+      <a class="link">
+        <a href="" class="product-imgwrapper">
+          <img src="/assets/images/placeholder-img.png">
+        </a>
+        <h3 class="product-category">{{item.id}}</h3>
+        <h2 class="product-category-title">{{item.name}}</h2>
+        <h3 class="product-preis">{{item.price}}</h3>
+      </a>
+    </div>
+</section>
+
+</div>
+
+<app-footer></app-footer>

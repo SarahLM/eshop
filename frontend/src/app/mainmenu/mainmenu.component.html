@@ -4,22 +4,13 @@
 	<ul class="first-ul">
 	 	<li class="nav-item">
 
-        <a href ="javascript:void(0)" (click)="showProducts('Ordnen')">PAPETERIE</a>
+        <a [routerLink]="['/category', 'Papeterie']">PAPETERIE</a>
 
 		 	<div class="dropdown-content">
 		 		<div class="dropdown-content-inner">
 
-        <h3>Kalender</h3>
-
-<div *ngFor="let item of myItem">
-      
-
-        <h3>{{item.name}}</h3>
-      
-      				
-
-    </div>
-
+        <a [routerLink]="['/subcategory', 'Kalendar & Terminkalendar']">Kalender&Terminplaner</a>
+        <a [routerLink]="['/subcategory', 'Papier']">Papier</a>
 
 
 				</div>
@@ -28,103 +19,51 @@
 
 	    </li> <!-- E PAPETERIE -->
 	 	<li class="nav-item">
-	 		<a>ORDNEN</a>
-			<div class="dropdown-content">
-		 		<div class="dropdown-content-inner">
-		 			<div>
-						<h3>Ordner</h3>
-					    <ul>
-					   		<li><a href="#">Artikel 1</a></li>
-							<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Hefter</h3>
-					    <ul>
-						   	<li><a href="#">Artikel 1</a></li>
-						  	<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-					  	</ul>
-					</div>
+	 	<a [routerLink]="['/category', 'Ordnen']">ORDNEN</a>
+
+		 <div class="dropdown-content">
+		 <div class="dropdown-content-inner">
+
+        <a [routerLink]="['/subcategory', 'Ordner']">Ordner</a>
+        <a [routerLink]="['/subcategory', 'Hefter']">Hefter</a>
+
+
 				</div>
 	    	</div>
 	 	</li> <!-- E ORDNEN -->
 		<li class="nav-item">
-			<a>SCHREIBWAREN</a>
-			<div class="dropdown-content">
-		 		<div class="dropdown-content-inner">
-		 			<div>
-						<h3>Schreibger&auml;te</h3>
-					    <ul>
-					   		<li><a href="#">Artikel 1</a></li>
-							<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Korrigieren</h3>
-					    <ul>
-						   	<li><a href="#">Artikel 1</a></li>
-						  	<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-					  	</ul>
-					</div>
+			<a [routerLink]="['/category', 'Schreibwaren']">SCHREIBWAREN</a>
+
+		 <div class="dropdown-content">
+		 <div class="dropdown-content-inner">
+
+        <a [routerLink]="['/subcategory', 'Schreibgeräte']">Schreibgeräte</a>
+        <a [routerLink]="['/subcategory', 'Korrigieren']">Korrigieren</a>
+
 				</div>
 	    	</div>
 		</li> <!-- E SCHREIBWAREN -->
-		<li class="nav-item"><a href='#'>K&Uuml;NSTLERBEDARF</a>
-			<div class="dropdown-content">
-		 		<div class="dropdown-content-inner">
-		 			<div>
-						<h3>Malen &amp; Zeichnen</h3>
-					    <ul>
-					   		<li><a href="#">Artikel 1</a></li>
-							<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-						  	<li><a href="#">Artikel 6</a></li>
-						  	<li><a href="#">Artikel 7</a></li>
-						  	<li><a href="#">Artikel 8</a></li>
-						  	<li><a href="#">Artikel 9</a></li>
-						  	<li><a href="#">Artikel 10</a></li>
-						</ul>
-					</div>
+		<li class="nav-item">
+			<a [routerLink]="['/category', 'Künstlerbedarf']">K&Uuml;NSTLERBEDARF</a>
+
+		 <div class="dropdown-content">
+		 <div class="dropdown-content-inner">
+
+        <a [routerLink]="['/subcategory', 'Malen & Zeichnen']">Malen&Zeichnen</a>
+
 				</div>
 	    	</div>
 		</li> <!-- E KUNSTLER BEDARF -->
 		<li class="nav-item">
-			<a>BASTELN</a>
-			<div class="dropdown-content">
-		 		<div class="dropdown-content-inner">
-		 			<div>
-						<h3>Kleber</h3>
-					    <ul>
-					   		<li><a href="#">Artikel 1</a></li>
-							<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Werkzeuge</h3>
-					    <ul>
-						   	<li><a href="#">Artikel 1</a></li>
-						  	<li><a href="#">Artikel 2</a></li>
-						  	<li><a href="#">Artikel 3</a></li>
-						  	<li><a href="#">Artikel 4</a></li>
-						  	<li><a href="#">Artikel 5</a></li>
-					  	</ul>
-					</div>
+			<a [routerLink]="['/category', 'Basteln']">BASTELN</a>
+
+		 		<div class="dropdown-content">
+		 			<div class="dropdown-content-inner">
+
+        	<a [routerLink]="['/subcategory', 'Kleber']">Kleber</a>
+        	<a [routerLink]="['/subcategory', 'Werkzeuge']">Werkzeuge</a>
+
+
 				</div>
 	    	</div>
 	    </li> <!-- E BASTELN -->

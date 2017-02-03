@@ -33,6 +33,8 @@ import { CartPageComponent } from "./cart-page/cart-page.component";
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { CategoryComponent } from "./category/category.component";
+import { SubCategoryComponent } from "./subcategory/subcategory.component";
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     AdresspageComponent,
     ImpressumComponent,
     KontaktComponent,
-    AboutusComponent
+    AboutusComponent,
+    CategoryComponent,
+    SubCategoryComponent
 
   ],
   imports: [

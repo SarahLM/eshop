@@ -17,7 +17,8 @@ import {CartPageComponent} from "./cart-page/cart-page.component";
 import { KontaktComponent } from "./kontakt/kontakt.component";
 import { ImpressumComponent} from "./impressum/impressum.component";
 import { AboutusComponent } from "./aboutus/aboutus.component";
-
+import { CategoryComponent } from "./category/category.component";
+import { SubCategoryComponent } from "./subcategory/subcategory.component";
 
 //hier werden die Routes definiert
 export const routes: Routes = [
@@ -25,6 +26,8 @@ export const routes: Routes = [
   { path: 'cart', component: CartPageComponent },
   { path: 'login', component: LoginComponent	},
   { path: 'registration/:id', component: RegistrationComponent	},
+  { path: 'category/:name', component: CategoryComponent  },
+  { path: 'subcategory/:name', component: SubCategoryComponent  },
   { path: 'product-page', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
