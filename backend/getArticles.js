@@ -86,23 +86,36 @@ function searchArticlesDashboard(req,res,next){
 }
 
 
-//Für später Artikel einpflegen ein Post-Beispiel:
-/*function createPuppy(req, res, next) {
-  req.body.age = parseInt(req.body.age);
-  db.none('insert into pups(name, breed, age, sex)' +
-      'values(${name}, ${breed}, ${age}, ${sex})',
-    req.body)
-    .then(function () {
-      res.status(200)
-        .json({
-          status: 'success',
-          message: 'Inserted one puppy'
-        });
-    })
-    .catch(function (err) {
-      return next(err);
-    });
-}*/
+function getNeuheiten(req,res,next){
+
+  db.any("SELECT * FROM article WHERE id=5 OR id=29 OR id=34;")
+      .then(function(data){
+        res.status(200)
+          .json({
+            data
+          });
+      })
+      .catch(function(err){
+        return next(err);
+      });
+}
+
+function getSale(req,res,next){
+
+  db.any("SELECT * FROM article WHERE color='blau' OR color='grün';")
+      .then(function(data){
+        res.status(200)
+          .json({
+            data
+          });
+      })
+      .catch(function(err){
+        return next(err);
+      });
+}
+
+
+
 
 
 module.exports = {
@@ -110,5 +123,7 @@ module.exports = {
   getArticlesfromCategory : getArticlesfromCategory,
   getArticlesfromSubCategory : getArticlesfromSubCategory,
   getSingleArticle : getSingleArticle,
-  searchArticlesDashboard : searchArticlesDashboard
+  searchArticlesDashboard : searchArticlesDashboard,
+  getNeuheiten : getNeuheiten,
+  getSale : getSale
 }
