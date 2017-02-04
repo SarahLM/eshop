@@ -20,6 +20,7 @@ var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:
 function deleteArticle(req, res, next) {
   db.any("select deleteArticle("+req.params.id+")")
     .then(function (data) {
+      console.log("Artikel gelöscht "+ req.params.id)
       res.status(200)
         .json({
           

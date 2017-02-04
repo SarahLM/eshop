@@ -58,6 +58,13 @@ export class DashboardStartpageComponent implements OnInit {
 
   }
 
+  deleteArticle(item) {
+    let id = item.id;
+    this.http.delete('http://localhost:8080/deleteArticle/' + id).subscribe((res) => {
+      console.log(res);
+    });
+}
+
   modifyProduct(item: ProductDivComponent) {
 
     // Schritt 1: das übergebene item in eine Form zum bearbeiten laden

@@ -80,7 +80,7 @@ export class dataService {
        }
 
        public Delete = (id: number): Observable<Response> => {
-           return this._http.delete(this.actionUrl + id)
+           return this._http.delete(this.actionUrl+"/deleteArticle/"+id)
                .catch(this.handleError);
        }
 
