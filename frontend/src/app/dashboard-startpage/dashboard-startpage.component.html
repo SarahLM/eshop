@@ -6,7 +6,6 @@
 			<h1>Neuen Mitarbeiter einladen</h1>
 				<div class="send-email" data-success="Eine Email ist gesendet">
 
-					<div *ngIf="showSuccess">Mail gesendet</div>
 
 					<!--<div class="email-input">-->
 					<form #f="ngForm" (ngSubmit)="sendMail(f)">
@@ -14,6 +13,7 @@
 
 							<input name="mail" id="mail" type="email" placeholder="" required ngModel>
 							<button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>send email</button>
+
 
 						</div>
 
@@ -52,7 +52,7 @@
 				      <td>{{item.name}}</td>
 				      <td>{{item.category}}</td>
 				      <td>{{item.price}}</td>
-					  <td><button (click)="modifyProduct(item)">Bearbeiten</button></td>
+					 <td><a [routerLink]="['edit-product', item.id]">Bearbeiten</a></td>
 					  <td><button (click)="deleteArticle(item)">L&ouml;schen</button></td>
 
 					   </tr>
