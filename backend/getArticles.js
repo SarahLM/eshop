@@ -115,6 +115,21 @@ function getSale(req,res,next){
 }
 
 
+function getTopProducts(req,res,next){
+
+  db.any("SELECT * FROM article WHERE id=8 OR id=11 OR id=10 OR id=25 OR id=29 OR id=20 OR id=41 OR id=45 OR id=34;")
+      .then(function(data){
+        res.status(200)
+          .json({
+            data
+          });
+      })
+      .catch(function(err){
+        return next(err);
+      });
+}
+
+
 
 
 
@@ -125,5 +140,6 @@ module.exports = {
   getSingleArticle : getSingleArticle,
   searchArticlesDashboard : searchArticlesDashboard,
   getNeuheiten : getNeuheiten,
-  getSale : getSale
+  getSale : getSale,
+  getTopProducts : getTopProducts
 }

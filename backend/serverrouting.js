@@ -65,6 +65,8 @@ app.get('/home', function(req, res) {
 
   app.get('/getSale',getArticles.getSale);
 
+  app.get('/getTopProducts',getArticles.getTopProducts);
+
   app.put('/update',putArticle.updateArticle);
 
  app.get('/category/:category',getArticles.getArticlesfromCategory);
