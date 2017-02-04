@@ -13,6 +13,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  public showSuccess: boolean;
+
   constructor(private http: Http) { }
 
 
@@ -23,6 +25,8 @@ export class LoginComponent implements OnInit {
   	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/login/' + username+'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
+        this.showSuccess = res["_body"] == "OK";
+      if (this.showSuccess) form.reset();
 	});
    }
   ngOnInit() {

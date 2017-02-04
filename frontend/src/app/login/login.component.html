@@ -4,6 +4,10 @@
 
 	<div class="form">
   		<h2>Als Mitarbeiter anmelden</h2>
+      <div class="loginSenden" data-success="eingeloggt">
+
+          <div *ngIf="showSuccess">eingeloggt</div>
+
       <form #f="ngForm" (ngSubmit)="loginSenden(f)"class="register-form">
       		<input name="username" type="text" placeholder="email angeben" required ngModel/>
       		<input name="password" type="password" placeholder="password angeben"required ngModel/>

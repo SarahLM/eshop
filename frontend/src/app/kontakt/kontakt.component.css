@@ -1,18 +1,23 @@
 #kontakth1{
 	margin-top:5px;
+	font-size: 30px;
 	
 }
 
+
+
 .div1{
-	 width: 70%;
+	   width: 35%;
     text-align: left;
     display: inline-block;
-    margin-right: 15%;
-    margin-left: 15%;
-    margin-bottom: 20%;
+    margin-right: 32.5%;
+    margin-left: 32.5%;
+    margin-bottom: 5%;
+    margin-top: 2%;
 }
 .row{
-	margin-top: 5px;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 #email_send{
 	margin-top: 10px;
