@@ -8,26 +8,28 @@ import { NgForm } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-dashboard-productpage',
-  templateUrl: './dashboard-productpage.component.html',
-  styleUrls: ['./dashboard-productpage.component.css']
+  selector: 'app-editproduct',
+  templateUrl: './editproduct.component.html',
+  styleUrls: ['./editproduct.component.css']
 })
-export class DashboardProductpageComponent implements OnInit  {
-public showSuccess: boolean;
+export class EditproductComponent implements OnInit {
+
+	public showSuccess: boolean;
+
  constructor(private http: Http) {
     
-}
-putArticle(form: NgForm) {
-
+    }
+    putArticle(form: NgForm) {
 	this.http.post( 'http://localhost:8080/putArticle', form.value ).toPromise()
 		.then((res: Response) => {
 	    	console.log(res);
 	    	let mailReceiver = form.value.mail;
 	    	this.showSuccess = res["_body"] == "OK";
       		if (this.showSuccess) form.reset();
-	});
-
-};
+      		});
+	};
+ 
   ngOnInit() {}
+  }
 
-}
+

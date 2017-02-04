@@ -35,6 +35,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CategoryComponent } from "./category/category.component";
 import { SubCategoryComponent } from "./subcategory/subcategory.component";
+import { EditproductComponent } from './editproduct/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { SubCategoryComponent } from "./subcategory/subcategory.component";
     KontaktComponent,
     AboutusComponent,
     CategoryComponent,
-    SubCategoryComponent
+    SubCategoryComponent,
+    EditproductComponent
 
   ],
   imports: [
