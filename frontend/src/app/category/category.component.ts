@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { dataService } from '../_services/dataService';
-import {ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 import { ProductDivComponent } from '../product-div/product-div.component';
 
 @Component({
@@ -17,28 +16,36 @@ export class CategoryComponent implements OnInit {
   categoryName: string;
   private sub: any;
 
+  private isDisabled: boolean;
+  private isOpen: boolean = false;
+
   public myItems: ProductDivComponent [];
 
-  constructor(private route : ActivatedRoute, private _dataService: dataService) {}
-  
+  constructor(private route: ActivatedRoute, private _dataService: dataService) {
+  }
 
   ngOnInit() {
-
-      this.sub = this.route.params.subscribe(params => {
+    this.sub = this.route.params.subscribe(params => {
       this.categoryName = params['name'];
       this.getCategoryItems(this.categoryName);
-      });
-    
+    });
   }
 
-  private getCategoryItems(categoryName : string): void {
-    
-        this._dataService
-            .ShowProducts(categoryName)
-            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
-                error => console.log(error),
-                () => console.log(this.myItems));
-
+  private getCategoryItems(categoryName: string): void {
+    this._dataService
+      .ShowProducts(categoryName)
+      .subscribe((myItems: ProductDivComponent[]) => this.myItems = myItems,
+        error => console.log(error),
+        () => console.log(this.myItems));
   }
 
- }
+  toggleOpen(event) {
+    event.preventDefault();
+    if (!this.isDisabled) {
+      this.isOpen = !this.isOpen;
+    }
+  }
+
+}
+
+
