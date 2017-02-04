@@ -56,10 +56,13 @@ app.get('/home', function(req, res) {
  app.delete('/deleteArticle/:id',putArticle.deleteArticle);
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
+
+ app.get('/searchArticle/:category/:userinput',getArticles.searchArticlesDashboard);
+
   app.get('/getSingleArticle/:id',getArticles.getSingleArticle);
+
   app.put('/update',putArticle.updateArticle);
 
- 
  app.get('/category/:category',getArticles.getArticlesfromCategory);
  
  app.get('/login/:username/:password',login.login);

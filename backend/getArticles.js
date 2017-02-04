@@ -69,6 +69,23 @@ db.any("SELECT * from Article where subcategory='"+req.params.subcategory+"';")
 
 
 }
+
+// Um im Dashboard einen Artikel nach Kategorie und mit Inputfeld zu suchen
+function searchArticlesDashboard(req,res,next){
+
+  db.any("SELECT * FROM article WHERE category='"+req.params.category+"' AND name LIKE '%"+req.params.userinput+"%';")
+      .then(function(data){
+        res.status(200)
+          .json({
+            data
+          });
+      })
+      .catch(function(err){
+        return next(err);
+      });
+}
+
+
 //Für später Artikel einpflegen ein Post-Beispiel:
 /*function createPuppy(req, res, next) {
   req.body.age = parseInt(req.body.age);
@@ -92,5 +109,6 @@ module.exports = {
 	getArticles: getArticles,
   getArticlesfromCategory : getArticlesfromCategory,
   getArticlesfromSubCategory : getArticlesfromSubCategory,
-  getSingleArticle : getSingleArticle
+  getSingleArticle : getSingleArticle,
+  searchArticlesDashboard : searchArticlesDashboard
 }
