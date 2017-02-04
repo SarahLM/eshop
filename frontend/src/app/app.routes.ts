@@ -19,6 +19,8 @@ import { ImpressumComponent} from "./impressum/impressum.component";
 import { AboutusComponent } from "./aboutus/aboutus.component";
 import { CategoryComponent } from "./category/category.component";
 import { SubCategoryComponent } from "./subcategory/subcategory.component";
+import { editproductComponent } from "./editproduct/editproduct.component";
+
 
 //hier werden die Routes definiert
 export const routes: Routes = [
@@ -31,6 +33,8 @@ export const routes: Routes = [
   { path: 'product-page', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
+  { path: 'mitarbeiter-bereich/edit-product/:id', component: editproductComponent },
+
   { path: 'registration-infopage', component: RegistrationInfopageComponent},
   { path: 'cart/bestelluebersicht', component: BestelluebersichtComponent},
   { path: 'cart/bestelluebersicht/adresse', component: AdresspageComponent},

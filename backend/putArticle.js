@@ -57,8 +57,35 @@ function putArticle(req, res, next) {
     });
   
 }
+function updateArticle(req, res, next) {
+
+  var sql = "SELECT updateArticle( " +
+              req.body.productid + ",'" +
+              req.body.productname + "','" +
+              req.body.color + "','" +
+              req.body.kategorie + "','" +
+              req.body.subkategorie + "','" +
+              req.body.beschreibung + "'," +
+              req.body.preis + "," +
+              req.body.anzahl + ");"
+
+  db.any(sql)
+      .then(function (data) {
+      res.status(200)
+        .json({
+          
+          data
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+  
+}
 
 module.exports = {
   putArticle : putArticle,
-  deleteArticle : deleteArticle
+  deleteArticle : deleteArticle,
+  updateArticle : updateArticle
+
 }

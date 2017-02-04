@@ -50,6 +50,13 @@ export class dataService {
 
             .catch(this.handleError);
   }
+  public updateProducts = (id: string): Observable<ProductDivComponent> => {
+    console.log(id + " aus dataService.")
+    return this._http.get(this.actionUrl+"/getSingleArticle/"+ id)
+            .map((response: Response) => <ProductDivComponent>response.json().data)
+
+            .catch(this.handleError);
+  }
 
  /* public GetAllDash = (): Observable<DashboardStartpageComponent[]> => {
     return this._http.get(this.actionUrl+"/allArticles")
@@ -73,8 +80,8 @@ export class dataService {
                .catch(this.handleError);
        }
 
-       public Update = (id: number, itemToUpdate: ProductDivComponent): Observable<ProductDivComponent> => {
-           return this._http.put(this.actionUrl + id, JSON.stringify(itemToUpdate), { headers: this.headers })
+       public Update = (itemToUpdate: ProductDivComponent): Observable<ProductDivComponent> => {
+           return this._http.put(this.actionUrl + "/update", JSON.stringify(itemToUpdate), { headers: this.headers })
                .map((response: Response) => <ProductDivComponent>response.json())
                .catch(this.handleError);
        }

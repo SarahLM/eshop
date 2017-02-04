@@ -26,16 +26,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-//app.use(express.static(path.join(__dirname, 'static')));
-//var app = express();
-
-//var pgp = require("pg-promise")(/*options*/);
-//var db = pgp("postgres://postgres@projektwebshop.f4.htw-berlin.de:5432/webshopdatabase");
 
 var registrierung = require('./registrierung.js')
 var auth = require('./auth.js')
 var putArticle = require('./putArticle.js')
-
+var getSingleArticle = require('./getArticles.js')
 //var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
 var getArticles = require('./getArticles.js')
@@ -61,6 +56,9 @@ app.get('/home', function(req, res) {
  app.delete('/deleteArticle/:id',putArticle.deleteArticle);
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
+  app.get('/getSingleArticle/:id',getArticles.getSingleArticle);
+  app.put('/update',putArticle.updateArticle);
+
  
  app.get('/category/:category',getArticles.getArticlesfromCategory);
  
