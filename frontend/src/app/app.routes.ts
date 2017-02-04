@@ -21,6 +21,7 @@ import { CategoryComponent } from "./category/category.component";
 import { SubCategoryComponent } from "./subcategory/subcategory.component";
 import { editproductComponent } from "./editproduct/editproduct.component";
 import {SalePageComponent} from "./sale-page/sale-page.component";
+import {NewPageComponent} from "./new-page/new-page.component";
 
 
 //hier werden die Routes definiert
@@ -36,6 +37,7 @@ export const routes: Routes = [
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
   { path: 'mitarbeiter-bereich/edit-product/:id', component: editproductComponent },
+  { path: 'neuheiten', component: NewPageComponent },
 
   { path: 'registration-infopage', component: RegistrationInfopageComponent},
   { path: 'cart/bestelluebersicht', component: BestelluebersichtComponent},

@@ -1,0 +1,99 @@
+section {
+  display: block;
+  position: relative;
+}
+
+section:before, section:after {
+  content: " ";
+  display: table;
+  clear: both;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.product {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.link {
+  min-height: 150px;
+  display: block;
+  position: relative;
+  padding: 10px;
+}
+
+.product-imgwrapper {
+  margin: 0 auto 15px;
+  min-height: 140px;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.product-imgwrapper img {
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  height: 150px;
+  vertical-align: middle;
+}
+
+.product-category-title {
+  text-align: center;
+  margin-top: 3px;
+  display: block;
+}
+
+.product-category {
+  color: #B2B2B2;
+  display: block;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.product-preis {
+  color: #D24D57;
+  font-size: 20px;
+  margin: 0px;
+  display: block;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.teaser {
+  height: 300px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.teaserimg {
+  height: 100%;
+  width: 100%;
+}
+
+/****** TEASER RESPONSIVE ******/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .teaser {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .teaser {
+    display: none;
+  }
+}
