@@ -36,6 +36,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { CategoryComponent } from "./category/category.component";
 import { SubCategoryComponent } from "./subcategory/subcategory.component";
 import { editproductComponent } from './editproduct/editproduct.component';
+import {SalePageComponent} from "./sale-page/sale-page.component";
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { editproductComponent } from './editproduct/editproduct.component';
     RegistrationComponent,
     LightboxComponent,
     MainmenuComponent,
+    SalePageComponent,
     StartpageComponent,
     SearchbarComponent,
     TeaserbannerComponent,

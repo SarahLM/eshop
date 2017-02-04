@@ -6,6 +6,7 @@
 	float: left;
 	display: inline;
 	max-width: 50%;
+  cursor: pointer;
 }
 
 .teaserblock img {
