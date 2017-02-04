@@ -32,7 +32,7 @@ export const routes: Routes = [
   { path: 'category/:name', component: CategoryComponent  },
   { path: 'sale', component: SalePageComponent },
   { path: 'subcategory/:name', component: SubCategoryComponent  },
-  { path: 'product-page', component: ProductPageComponent },
+  { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },
   { path: 'mitarbeiter-bereich/edit-product/:id', component: editproductComponent },

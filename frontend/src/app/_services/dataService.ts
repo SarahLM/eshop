@@ -66,9 +66,9 @@ export class dataService {
             .catch(this.handleError);
   }*/
 
-  public GetSingle = (id: number): Observable<ProductDivComponent> => {
-       return this._http.get(this.actionUrl + id)
-           .map((response: Response) => <CartPageComponent>response.json())
+  public GetSingle = (id: String): Observable<ProductDivComponent[]> => {
+       return this._http.get(this.actionUrl+"/getSingleArticle/" + id)
+           .map((response: Response) => <ProductDivComponent[]>response.json().data)
            .catch(this.handleError);
    }
 
