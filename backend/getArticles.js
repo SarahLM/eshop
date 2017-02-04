@@ -18,6 +18,19 @@ function getArticles(req, res, next) {
     });
 }
 
+function getSingleArticle(req, res, next) {
+  db.any("SELECT * from Article where id="+req.params.id+";")
+    .then(function (data) {
+      res.status(200)
+        .json({
+          
+          data
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+}
 
 function getArticlesfromCategory(req,res,next){
 
@@ -78,5 +91,6 @@ db.any("SELECT * from Article where subcategory='"+req.params.subcategory+"';")
 module.exports = {
 	getArticles: getArticles,
   getArticlesfromCategory : getArticlesfromCategory,
-  getArticlesfromSubCategory : getArticlesfromSubCategory
+  getArticlesfromSubCategory : getArticlesfromSubCategory,
+  getSingleArticle : getSingleArticle
 }

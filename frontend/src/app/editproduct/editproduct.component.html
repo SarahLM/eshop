@@ -5,17 +5,17 @@
             <h2>
    Produkt &Uuml;bersicht
   </h2>
-            <div class="dashboard-form">
-                <form #f="ngForm" (ngSubmit)="putArticle(f)">
+            <div class="dashboard-form" *ngIf="myItem">
+                <form #f="ngForm" (ngSubmit)="updateProduct(f)">
                     <h3>* Name: </h3>
-                    <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required ngModel>
+                    <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required [(ngModel)]="myItem.name">
                     <br>
                     <h3>* ID: </h3>
-                    <input id="productname" name="productid" type="text" placeholder="ID eingeben" required ngModel>
+                    <input id="productname" name="productid" type="text" placeholder="ID eingeben" required [(ngModel)]="myItem.id">
                     <br>
                     <div>
                         <h3>* Kategorie </h3>
-                        <select id="productname" name="kategorie" required ngModel>
+                        <select id="productname" name="kategorie" required [(ngModel)]="myItem.category">
                             <option value="Papeterie">Papeterie</option>
                             <option value="Ordnen">Ordnen</option>
                             <option value="Schreibwaren">Schreibwaren</option>
@@ -24,7 +24,7 @@
                         </select>
                         <br>
                         <h3>* SubKategorie </h3>
-                        <select id="productname" name="subkategorie" required ngModel>
+                        <select id="productname" name="subkategorie" required [(ngModel)]="myItem.subcategory">
                             <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
                             <option value="Ordner">Ordnen</option>
                             <option value="Hefter">Hefter</option>
@@ -37,7 +37,7 @@
                         </select>
                         <br>
                         <h3>* Farbe </h3>
-                        <select id="productname" name="color" required ngModel>
+                        <select id="productname" name="color" required [(ngModel)]="myItem.color">
                             <option value="Schwarz">Schwarz</option>
                             <option value="Rot">Rot</option>
                             <option value="Blau">Blau</option>
@@ -51,13 +51,13 @@
                         <br>
                     </div>
                     <h3>* Details: </h3>
-                    <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required ngModel>
+                    <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required [(ngModel)]="myItem.info">
                     <div id="Preis_Anazhl">
                     <h3>* Preis:  </h3>
-                    <input id="productname" name="preis" type="text" placeholder="" required ngModel>
+                    <input id="productname" name="preis" type="text" placeholder="" required [(ngModel)]="myItem.price">
                     <br>
                     <h3>* Anzahl:  </h3>
-                    <input id="productname" name="anzahl" type="text" placeholder="" required ngModel>
+                    <input id="productname" name="anzahl" type="text" placeholder="" required [(ngModel)]="myItem.stock">
                     </div>
                     <br>
                     <form method="post" action="upload.php" enctype="multipart/form-data">
