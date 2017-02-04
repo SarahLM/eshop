@@ -1,49 +1,89 @@
-select  {
-  width:307px;
-  height:40px;
-  font-family:'Avenir-Book', 'Avenir Book', 'Avenir';
-  font-weight:400;
-  font-style:normal;
-  font-size:13px;
-  text-decoration:none;
-  color:#000000;
+select {
+    width: 307px;
+    height: 40px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
 }
 
 u0 {
-  position: absolute;
-  left: 0px;
-  top: 102px;
-  width: 1440px;
-  height: 170px;
-  color: #CCCCCC;
+    position: absolute;
+    left: 0px;
+    top: 102px;
+    width: 1440px;
+    height: 170px;
+    color: #CCCCCC;
 }
 
-table, td, th {
+table,
+td,
+th {
+    border-bottom: 1px solid #ddd;
+}
 
-  border-bottom: 1px solid #ddd;
-  }
 table {
-  border-collapse: collapse;
-  width:100%;
-  margin-top: 10%;
-  margin-bottom: 20%;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 20%;
 }
 
-th, td {
-  text-align: left;
-  padding: 15px;
+th,
+td {
+    text-align: left;
+    padding: 15px;
+}
+
+#header_dash {
+    margin-top: 4%;
+}
+
+.input1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 12px;
+    outline: 0;
+    background: #FFFFFF;
+    width: 30%;
+    border: 1px solid #E9E9E9;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+#droplist {
+    width: 100%;
+    float: left;
+}
+
+#auswahl_j {
+    width: 15%;
 }
 
 
 /******* EMAIL INPUT FIELD und BUTTON ******/
-.email-input input {
+
+#email-input input {
     width: 400px;
 }
 
-.email-input button {
-  height: 35px;
+#email-input button {
+    height: 35px;
 }
 
 .fa {
-  margin-right: 10px;
+    margin-right: 10px;
+}
+
+#sendmail-btn {
+    margin-top: 2px;
+}
+
+#search_btn {
+    margin-left: 2px;
+}
+
+#product_add {
+    margin-left: 2px;
 }
