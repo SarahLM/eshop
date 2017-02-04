@@ -59,6 +59,8 @@ app.get('/home', function(req, res) {
 
  app.get('/searchArticle/:category/:userinput',getArticles.searchArticlesDashboard);
 
+  app.get('/searchArticle/:userinput',getArticles.searchArticlesMainPage);
+
   app.get('/getSingleArticle/:id',getArticles.getSingleArticle);
 
   app.get('/getNeuheiten',getArticles.getNeuheiten);

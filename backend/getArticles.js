@@ -85,6 +85,21 @@ function searchArticlesDashboard(req,res,next){
       });
 }
 
+//Um aufder Hauptseite mit Inputfield nach Produkten zu suchen
+function searchArticlesMainPage(req,res,next){
+
+  db.any("SELECT * FROM article WHERE name LIKE '%"+req.params.userinput+"%';")
+      .then(function(data){
+        res.status(200)
+          .json({
+            data
+          });
+      })
+      .catch(function(err){
+        return next(err);
+      });
+}
+
 
 function getNeuheiten(req,res,next){
 
@@ -139,6 +154,7 @@ module.exports = {
   getArticlesfromSubCategory : getArticlesfromSubCategory,
   getSingleArticle : getSingleArticle,
   searchArticlesDashboard : searchArticlesDashboard,
+  searchArticlesMainPage : searchArticlesMainPage,
   getNeuheiten : getNeuheiten,
   getSale : getSale,
   getTopProducts : getTopProducts
