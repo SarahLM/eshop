@@ -97,11 +97,17 @@ p {
 }
 
 .quadrat {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   background-color: #5A9C7B;
+  float: left;
 }
 
-.filter-block {
-  display: inline-flex;
+.filter-header {
+  margin-bottom: 5px;
+}
+
+.filter-text span {
+  float: right;
+  width: 90%;
 }

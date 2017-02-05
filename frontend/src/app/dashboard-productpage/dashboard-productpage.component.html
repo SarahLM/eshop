@@ -2,41 +2,43 @@
     <div class="dashboard">
         <div class="putArticle" data-success="Einen neuen Artikel wurde angelegt!">
             <div *ngIf="showSuccess">Neuer Artikel angelegt!</div>
-            <h2>
-   Produkt &Uuml;bersicht
-  </h2>
+            <h2 class="heading"> Produkt &Uuml;bersicht </h2>
             <div class="dashboard-form">
                 <form #f="ngForm" (ngSubmit)="putArticle(f)">
-                    <h3>* Name: </h3>
+                    <h1>* Name: </h1>
                     <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required ngModel>
                     <br>
-                    <h3>* ID: </h3>
+                    <h1>* ID: </h1>
                     <input id="productname" name="productid" type="text" placeholder="ID eingeben" required ngModel>
                     <br>
-                    <div>
-                        <h3>* Kategorie </h3>
-                        <select id="productname" name="kategorie" required ngModel>
-                            <option value="Papeterie">Papeterie</option>
-                            <option value="Ordnen">Ordnen</option>
-                            <option value="Schreibwaren">Schreibwaren</option>
-                            <option value="Künstlerbedarf">K&uuml;nstlerbedarf</option>
-                            <option value="Basteln">Basteln</option>
-                        </select>
-                        <br>
-                        <h3>* SubKategorie </h3>
-                        <select id="productname" name="subkategorie" required ngModel>
-                            <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
-                            <option value="Ordner">Ordnen</option>
-                            <option value="Hefter">Hefter</option>
-                            <option value="Papier">Papier</option>
-                            <option value="Kleber">Kleber</option>
-                            <option value="Korrigieren">Korrigieren</option>
-                            <option value="Werkzeuge">Werkzeugt</option>
-                            <option value="Schreibgeräte">Schreibgeräte</option>
-                            <option value="Malen&Zeichnen">Malen&Zeichnen</option>
-                        </select>
-                        <br>
-                        <h3>* Farbe </h3>
+                    <div id="select-boxen">
+                        <div id="left">
+                            <h1>* Kategorie </h1>
+                            <select id="productname" name="kategorie" required ngModel>
+                                <option value="Papeterie">Papeterie</option>
+                                <option value="Ordnen">Ordnen</option>
+                                <option value="Schreibwaren">Schreibwaren</option>
+                                <option value="Künstlerbedarf">K&uuml;nstlerbedarf</option>
+                                <option value="Basteln">Basteln</option>
+                            </select>
+                        </div>
+                        <div id="center">
+                            <h1>* SubKategorie </h1>
+                            <select id="productname" name="subkategorie" required ngModel>
+                                <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
+                                <option value="Ordner">Ordnen</option>
+                                <option value="Hefter">Hefter</option>
+                                <option value="Papier">Papier</option>
+                                <option value="Kleber">Kleber</option>
+                                <option value="Korrigieren">Korrigieren</option>
+                                <option value="Werkzeuge">Werkzeugt</option>
+                                <option value="Schreibgeräte">Schreibgeräte</option>
+                                <option value="Malen&Zeichnen">Malen&Zeichnen</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <h1>* Farbe </h1>
                         <select id="productname" name="color" required ngModel>
                             <option value="Schwarz">Schwarz</option>
                             <option value="Rot">Rot</option>
@@ -48,30 +50,35 @@
                             <option value="Transparent">Transparent</option>
                             <option value="Weiß">Weiß</option>
                         </select>
-                        <br>
                     </div>
-                    <h3>* Details: </h3>
-                    <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required ngModel>
-                    <div id="Preis_Anazhl">
-                    <h3>* Preis:  </h3>
-                    <input id="productname" name="preis" type="text" placeholder="" required ngModel>
-                    <br>
-                    <h3>* Anzahl:  </h3>
-                    <input id="productname" name="anzahl" type="text" placeholder="" required ngModel>
+                    <br/>
+                    <div id="Details">
+                        <h1>* Details: </h1>
+                        <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required ngModel>
                     </div>
-                    <br>
+                    <div id="Preis_Anzahl">
+                        <div id="Preis">
+                            <h1>* Preis:  </h1>
+                            <input id="productname" name="preis" type="text" placeholder="" required ngModel>
+                        </div>
+                        <div id="Anzahl">
+                            <h1>* Anzahl:  </h1>
+                            <input id="productname" name="anzahl" type="text" placeholder="" required ngModel>
+                        </div>
+                    </div>
+                    <div id="upload">
                     <form method="post" action="upload.php" enctype="multipart/form-data">
-                        <h3> Datei  </h3>
+                        <h1> Datei  </h1>
                         <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-                        <input type="file" name="datei" size="40" maxlength="100000">
+                        <input type="file" name="datei" maxlength="100000">
                     </form>
-                    <br>
+                    </div>
                     <div id="btn_area">
-                    <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
-                    <button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>abbrechen</button>
+                        <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
+                        <button routerLink="../">abbrechen</button>
                     </div>
                 </form>
             </div>
         </div>
-        </div>
-        </div>
+    </div>
+</div>
