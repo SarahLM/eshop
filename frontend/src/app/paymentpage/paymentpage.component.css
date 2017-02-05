@@ -1,7 +1,10 @@
 .container {
-    width: 80%;
-    margin: 100px auto;
-    margin-bottom: 10%;
+    width: 70%;
+    text-align: left;
+    display: inline-block;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20%;
 }
 
 .progressbar {

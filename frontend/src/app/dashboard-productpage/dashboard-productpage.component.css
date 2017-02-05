@@ -21,26 +21,26 @@
 }
 
 #select-boxen {
-	width:100%;
+    width:100%;
     float: left;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
 #left {
-	width: 45%;
+    width: 45%;
     float: left;
     
 }
 
 #center {
-	width:50%;
+    width:50%;
     float: left;
     margin-left: 2px;
 }
 
 #right {
-	width:100%;
+    width:100%;
     float: left;
     margin-bottom: 5%
 }
@@ -51,8 +51,8 @@
     height: 5%;
 }
 #Details{
-	margin-top: 5px;
-	width: 100%;
+    margin-top: 5px;
+    width: 100%;
 
 }
 
@@ -66,20 +66,20 @@
     margin-top: 5%;
 }
 #Preis{
-	float: left;
-	width: 20%;
-	margin-right: 10%;
+    float: left;
+    width: 20%;
+    margin-right: 10%;
 
 }
 
 #Anzahl{
-	float:left;
-	width:20%;
+    float:left;
+    width:20%;
 }
 
 #upload{
-	width:100%;
-	margin-top: 15%;
+    width:100%;
+    margin-top: 15%;
 }
 
 .dashboard-form[_ngcontent-doh-4] {
