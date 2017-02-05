@@ -1,24 +1,24 @@
-#kontakth1{
-	margin-top:5px;
-	font-size: 30px;
-	
+#kontakth1 {
+    margin-top: 5px;
+    font-size: 30px;
 }
 
-
-
-.div1{
-	   width: 35%;
+.div1 {
+    width: 35%;
     text-align: left;
     display: inline-block;
     margin-right: 32.5%;
     margin-left: 32.5%;
     margin-bottom: 5%;
     margin-top: 2%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-.row{
-	margin-top: 2%;
-	margin-bottom: 2%;
+
+.row {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-#email_send{
-	margin-top: 10px;
+
+#email_send {
+    margin-top: 10px;
 }
