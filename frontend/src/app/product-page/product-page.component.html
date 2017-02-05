@@ -2,30 +2,30 @@
 
 <div class="body">
 
-  <!-- Nav-bar -->
+  <!-- Nav-bar 
   <nav class="navbar">
     <ul>
       <li><span class="fa fa-scissors"></span><a href="/">Home</a></li>
       <li><span class="divisor"></span><a>Label 1</a></li>
       <li><span class="divisor"></span><a href=#>Sublabel 1</a></li>
     </ul>
-  </nav>
+  </nav>-->
+  
 
   <!-- Item Specification-->
-  <div class="col-md-1 item">
+  <div class="col-md-1 item" *ngFor="let item of myItems">
       <div class="col-md-2 img-wrapper">
-        <img src="/assets/images/placeholder-img.png">
+        <img src="/assets/images/{{item.id}}.jpg">
       </div>
       <div class="col-md-2 detail">
-          <div class="item-specification-name"><h1>Item name</h1></div>
-          <div class="item-specification-id"><h3>#000111</h3></div>
+          <div class="item-specification-name"><h1>{{item.name}}</h1></div>
+          <div class="item-specification-id"><h3>Anzahl: {{item.stock}}</h3></div>
           <div class="content-specification-keyvalue">
-            <div class="key">Farbe</div>
+            <div class="key">{{item.color}}</div>
             <div class="value">-</div>
           </div>
-          <p><b>Description</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat tenetur adipisci ipsa laudantium architecto,
-          enim perspiciatis nam, voluptate nobis tempore minima hic a libero, facere sunt aspernatur eum nesciunt.</p>
-          <div class="item-specification-preis">€€€</div>
+          <p><b>{{item.info}}</b></p>
+          <div class="item-specification-preis">{{item.price}}</div>
       </div>
   </div>
 
@@ -49,6 +49,7 @@
       </a>
     </div>
   </div>
+
 </div>
 
 <app-footer></app-footer>

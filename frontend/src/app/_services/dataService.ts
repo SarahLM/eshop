@@ -31,7 +31,7 @@ export class dataService {
 
   public SearchProducts = (search: string, auswahl: string): Observable<ProductDivComponent[]> => {
     console.log(search + " aus dataService.")
-    return this._http.get(this.actionUrl+"/category/"+auswahl)
+    return this._http.get(this.actionUrl+"/searchArticle/"+auswahl+"/"+search)
             .map((response: Response) => <ProductDivComponent[]>response.json().data)
 
             .catch(this.handleError);
@@ -66,9 +66,9 @@ export class dataService {
             .catch(this.handleError);
   }*/
 
-  public GetSingle = (id: number): Observable<ProductDivComponent> => {
-       return this._http.get(this.actionUrl + id)
-           .map((response: Response) => <CartPageComponent>response.json())
+  public GetSingle = (id: String): Observable<ProductDivComponent[]> => {
+       return this._http.get(this.actionUrl+"/getSingleArticle/" + id)
+           .map((response: Response) => <ProductDivComponent[]>response.json().data)
            .catch(this.handleError);
    }
 
