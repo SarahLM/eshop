@@ -1,8 +1,7 @@
-/**
- * Created by Silvia_clf on 04/02/17.
- */
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Http, Response, Headers } from '@angular/http';
+import { dataService } from '../_services/dataService';
+import { ProductDivComponent } from '../product-div/product-div.component';
 
 @Component({
   selector: 'app-new-page',
@@ -11,7 +10,22 @@ import { Component } from '@angular/core';
 })
 export class NewPageComponent  {
 
-  constructor() { }
+  public myItems: ProductDivComponent [];
+
+  constructor(private _dataService: dataService) { }
+
+  ngOnInit() {
+    this.getAllItemsneu();
+    console.log(this.myItems);
+  }
+
+  private getAllItemsneu(): void {
+        this._dataService
+            .GetAllneu()
+            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
+                error => console.log(error),
+                () => console.log(this.myItems));
+    }
 
 
 }

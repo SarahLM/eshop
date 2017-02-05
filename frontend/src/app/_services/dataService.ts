@@ -29,6 +29,30 @@ export class dataService {
             .catch(this.handleError);
   }
 
+  public GetAlltop = (): Observable<ProductDivComponent[]> => {
+    return this._http.get(this.actionUrl+"/getTopProducts")
+            //.map((response: Response) => <ProductDivComponent[]>response.json().items)
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }
+
+  public GetAllneu = (): Observable<ProductDivComponent[]> => {
+    return this._http.get(this.actionUrl+"/getNeuheiten")
+            //.map((response: Response) => <ProductDivComponent[]>response.json().items)
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }
+
+  public GetAllsale = (): Observable<ProductDivComponent[]> => {
+    return this._http.get(this.actionUrl+"/getSale")
+            //.map((response: Response) => <ProductDivComponent[]>response.json().items)
+            .map((response: Response) => <ProductDivComponent[]>response.json().data)
+
+            .catch(this.handleError);
+  }
+
   public SearchProducts = (search: string, auswahl: string): Observable<ProductDivComponent[]> => {
     console.log(search + " aus dataService.")
     return this._http.get(this.actionUrl+"/searchArticle/"+auswahl+"/"+search)

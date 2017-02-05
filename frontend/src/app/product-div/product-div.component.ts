@@ -16,13 +16,13 @@ export class ProductDivComponent implements OnInit {
   constructor(private _dataService: dataService) { }
 
   ngOnInit() {
-    this.getAllItems();
+    this.getAllItemstop();
     console.log(this.myItems);
   }
 
-  private getAllItems(): void {
+  private getAllItemstop(): void {
         this._dataService
-            .GetAll()
+            .GetAlltop()
             .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
                 error => console.log(error),
                 () => console.log(this.myItems));
