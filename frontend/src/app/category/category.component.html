@@ -14,96 +14,29 @@
 
     <div class="filter">
       <p>filtern nach:</p>
-      <div class="card-header">
+      <div class="filter-header">
         <a href tabindex="0"><span (click)="toggleOpen($event)">Farbe</span></a>
       </div>
-      <div class="card-block" [hidden]="!isOpen">
-        <div class="card-text">
-          <div class="color"></div></div> <span>blaaaaaa</span>
-        </div>
+      <div class="filter-block" [hidden]="!isOpen">
+        <div class="filter-text">
+          <div class="quadrat"></div></div> <span>blaaaaaa</span>
       </div>
+    </div>
   </aside>
 
 
   <section>
-    <div class="col-md-3 col-sm-4 product">
+    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
       <a class="link">
         <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
+          <img src="/assets/images/{{item.id}}.jpg">
         </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-4 product">
-      <a class="link">
-        <a href="" class="product-imgwrapper">
-          <img src="/assets/images/placeholder-img.png">
-        </a>
-        <h3 class="product-category">Category</h3>
-        <h2 class="product-category-title">Product name</h2>
-        <h3 class="product-preis">€€€</h3>
+        <h3 class="product-category">{{item.id}}</h3>
+        <h2 class="product-category-title">{{item.name}}</h2>
+        <h3 class="product-preis">{{item.price}}</h3>
       </a>
     </div>
   </section>
-
 </div>
 
 <app-footer></app-footer>

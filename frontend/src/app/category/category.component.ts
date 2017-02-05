@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
 import { dataService } from '../_services/dataService';
 import { ActivatedRoute } from '@angular/router';
 import { ProductDivComponent } from '../product-div/product-div.component';
