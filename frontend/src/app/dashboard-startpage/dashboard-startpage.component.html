@@ -1,71 +1,5 @@
 <header></header>
 <div class="body">
-<<<<<<< HEAD
-	<div class="dashboard-class">
-
-			<h1>Neuen Mitarbeiter einladen</h1>
-				<div class="send-email" data-success="Eine Email ist gesendet">
-
-
-					<!--<div class="email-input">-->
-					<form #f="ngForm" (ngSubmit)="sendMail(f)">
-						<div *ngIf="showSuccess">Mail gesendet</div>
-						<div class="form-group">
-
-							<input name="mail" id="mail" type="email" placeholder="" required ngModel>
-							<button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>send email</button>
-
-
-						</div>
-
-					</form>
-
-				</div>
-
-
-
-			<h1>Produkte</h1>
-
-			<div id="droplist" class="search">
-				<form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
-					<input id="search_field" type="text" name="search" placeholder="Hier suchen.." required ngModel>
-					<select name="auswahl" required ngModel>
-						<option>Alle Produkte</option>
-						<option>Papeterie</option>
-						<option>Ordnen</option>
-						<option>K&uuml;nstlerbedarf</option>
-						<option>Basteln</option>
-					</select>
-					 <button id="search_btn" type="submit" value="Suchen">Suchen</button>
-					<button id="product_add" routerLink="add-product">Produkt hinzuf&uuml;gen</button>
-				</form>
-
-				<table>
-					<tr>
-						<th>Produktname</th>
-						<th>Produktart</th>
-						<th>Preis</th>
-						<th></th>
-						<th></th>
-					<tr>
-
-				   <tr *ngFor="let item of myItems">
-				      <td>{{item.name}}</td>
-				      <td>{{item.category}}</td>
-				      <td>{{item.price}}</td>
-					 <td><a [routerLink]="['edit-product', item.id]">Bearbeiten</a></td>
-					  <td><button (click)="deleteArticle(item)">L&ouml;schen</button></td>
-
-					   </tr>
-
-
-				</table>
-			</div>
-
-
-</div>
-</div>
-=======
     <div class="dashboard-class">
         <div id="header_dash">
             <h1>Neuen Mitarbeiter einladen</h1>
@@ -161,4 +95,3 @@
             </table>
         </div>
     </div>
->>>>>>> bc012a52c7bac197e3f7c2986d596ce5908e4a08
