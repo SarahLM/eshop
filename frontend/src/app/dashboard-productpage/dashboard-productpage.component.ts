@@ -22,7 +22,6 @@ putArticle(form: NgForm) {
 	this.http.post( 'http://localhost:8080/putArticle', form.value ).toPromise()
 		.then((res: Response) => {
 	    	console.log(res);
-	    	let mailReceiver = form.value.mail;
 	    	this.showSuccess = res["_body"] == "OK";
       		if (this.showSuccess) form.reset();
 	});
