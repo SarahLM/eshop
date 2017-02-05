@@ -2,9 +2,12 @@
 @import '../node_modules/font-awesome/css/font-awesome.css';
 
 html, body {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-stretch: extra-expanded;
-	height: 100%;
+	/*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+	/*font-stretch: extra-expanded;*/
+  /*font-style: normal;*/
+  /*font-variant: normal;*/
+	/*height: 100%;*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .body {

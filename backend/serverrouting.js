@@ -56,10 +56,23 @@ app.get('/home', function(req, res) {
  app.delete('/deleteArticle/:id',putArticle.deleteArticle);
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
+
+  app.get('/color/:color',getArticles.getArticlesByColor);
+
+ app.get('/searchArticle/:category/:userinput',getArticles.searchArticlesDashboard);
+
+  app.get('/searchArticle/:userinput',getArticles.searchArticlesMainPage);
+
   app.get('/getSingleArticle/:id',getArticles.getSingleArticle);
+
+  app.get('/getNeuheiten',getArticles.getNeuheiten);
+
+  app.get('/getSale',getArticles.getSale);
+
+  app.get('/getTopProducts',getArticles.getTopProducts);
+
   app.put('/update',putArticle.updateArticle);
 
- 
  app.get('/category/:category',getArticles.getArticlesfromCategory);
  
  app.get('/login/:username/:password',login.login);
