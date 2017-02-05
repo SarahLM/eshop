@@ -74,3 +74,18 @@ h1 {
     color: #32845B;
   }
 }
+
+
+/*** TABLET ***/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .img-wrapper {
+    display: none;
+  }
+}
+
+/*** HANDY ***/
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .img-wrapper {
+    display: none;
+  }
+}
