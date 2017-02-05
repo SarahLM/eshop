@@ -95,3 +95,13 @@ p {
 .filter span {
   padding-bottom: 5px;
 }
+
+.quadrat {
+  width: 10px;
+  height: 10px;
+  background-color: #5A9C7B;
+}
+
+.filter-block {
+  display: inline-flex;
+}

@@ -57,6 +57,8 @@ app.get('/home', function(req, res) {
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
 
+  app.get('/color/:color',getArticles.getArticlesByColor);
+
  app.get('/searchArticle/:category/:userinput',getArticles.searchArticlesDashboard);
 
   app.get('/searchArticle/:userinput',getArticles.searchArticlesMainPage);
