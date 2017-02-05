@@ -70,6 +70,22 @@ db.any("SELECT * from Article where subcategory='"+req.params.subcategory+"';")
 
 }
 
+function getArticlesByColor(req,res,next){
+
+db.any("SELECT * FROM Article WHERE color='"+req.params.color+"';")
+    .then(function (data) {
+      res.status(200)
+        .json({        
+          data
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+}
+
+
+
 // Um im Dashboard einen Artikel nach Kategorie und mit Inputfeld zu suchen
 function searchArticlesDashboard(req,res,next){
 
@@ -152,6 +168,7 @@ module.exports = {
 	getArticles: getArticles,
   getArticlesfromCategory : getArticlesfromCategory,
   getArticlesfromSubCategory : getArticlesfromSubCategory,
+  getArticlesByColor : getArticlesByColor,
   getSingleArticle : getSingleArticle,
   searchArticlesDashboard : searchArticlesDashboard,
   searchArticlesMainPage : searchArticlesMainPage,
