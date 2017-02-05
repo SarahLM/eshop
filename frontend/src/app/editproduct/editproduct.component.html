@@ -2,9 +2,8 @@
     <div class="dashboard">
         <div class="putArticle" data-success="Ein neuer Artikel wurde angelegt!">
             <div *ngIf="showSuccess">Neuer Artikel angelegt!</div>
-            <h2>
-   Produkt &Uuml;bersicht
-  </h2>
+            <h2 class="heading"> Produkt &Uuml;bersicht
+            </h2>
             <div class="dashboard-form" *ngIf="myItem">
                 <form #f="ngForm" (ngSubmit)="updateProduct(f)">
                     <h3>* Name: </h3>
@@ -13,29 +12,33 @@
                     <h3>* ID: </h3>
                     <input id="productname" name="productid" type="text" placeholder="ID eingeben" required [(ngModel)]="myItem.id">
                     <br>
-                    <div>
-                        <h3>* Kategorie </h3>
-                        <select id="productname" name="kategorie" required [(ngModel)]="myItem.category">
-                            <option value="Papeterie">Papeterie</option>
-                            <option value="Ordnen">Ordnen</option>
-                            <option value="Schreibwaren">Schreibwaren</option>
-                            <option value="Künstlerbedarf">K&uuml;nstlerbedarf</option>
-                            <option value="Basteln">Basteln</option>
-                        </select>
-                        <br>
-                        <h3>* SubKategorie </h3>
-                        <select id="productname" name="subkategorie" required [(ngModel)]="myItem.subcategory">
-                            <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
-                            <option value="Ordner">Ordnen</option>
-                            <option value="Hefter">Hefter</option>
-                            <option value="Papier">Papier</option>
-                            <option value="Kleber">Kleber</option>
-                            <option value="Korrigieren">Korrigieren</option>
-                            <option value="Werkzeuge">Werkzeugt</option>
-                            <option value="Schreibgeräte">Schreibgeräte</option>
-                            <option value="Malen&Zeichnen">Malen&Zeichnen</option>
-                        </select>
-                        <br>
+                    <div id="select-boxen">
+                        <div id="left">
+                            <h3>* Kategorie </h3>
+                            <select id="productname" name="kategorie" required [(ngModel)]="myItem.category">
+                                <option value="Papeterie">Papeterie</option>
+                                <option value="Ordnen">Ordnen</option>
+                                <option value="Schreibwaren">Schreibwaren</option>
+                                <option value="Künstlerbedarf">K&uuml;nstlerbedarf</option>
+                                <option value="Basteln">Basteln</option>
+                            </select>
+                        </div>
+                        <div id="center">
+                            <h3>* SubKategorie </h3>
+                            <select id="productname" name="subkategorie" required [(ngModel)]="myItem.subcategory">
+                                <option value="Kalendar&Terminkalendar">Kalender&Terminkalender</option>
+                                <option value="Ordner">Ordnen</option>
+                                <option value="Hefter">Hefter</option>
+                                <option value="Papier">Papier</option>
+                                <option value="Kleber">Kleber</option>
+                                <option value="Korrigieren">Korrigieren</option>
+                                <option value="Werkzeuge">Werkzeugt</option>
+                                <option value="Schreibgeräte">Schreibgeräte</option>
+                                <option value="Malen&Zeichnen">Malen&Zeichnen</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="right">
                         <h3>* Farbe </h3>
                         <select id="productname" name="color" required [(ngModel)]="myItem.color">
                             <option value="Schwarz">Schwarz</option>
@@ -48,30 +51,35 @@
                             <option value="Transparent">Transparent</option>
                             <option value="Weiß">Weiß</option>
                         </select>
-                        <br>
                     </div>
-                    <h3>* Details: </h3>
-                    <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required [(ngModel)]="myItem.info">
-                    <div id="Preis_Anazhl">
-                    <h3>* Preis:  </h3>
-                    <input id="productname" name="preis" type="text" placeholder="" required [(ngModel)]="myItem.price">
-                    <br>
-                    <h3>* Anzahl:  </h3>
-                    <input id="productname" name="anzahl" type="text" placeholder="" required [(ngModel)]="myItem.stock">
+                    <br/>
+                    <div id="Details">
+                        <h3>* Details: </h3>
+                        <input id="productname" name="beschreibung" type="text" placeholder="Bitte die Details eingeben..." required [(ngModel)]="myItem.info">
                     </div>
-                    <br>
-                    <form method="post" action="upload.php" enctype="multipart/form-data">
-                        <h3> Datei  </h3>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-                        <input type="file" name="datei" size="40" maxlength="100000">
-                    </form>
-                    <br>
+                    <div id="Preis_Anzahl">
+                        <div id="Preis">
+                            <h3>* Preis:  </h3>
+                            <input id="productname" name="preis" type="text" placeholder="" required [(ngModel)]="myItem.price">
+                        </div>
+                        <div id="Anzahl">
+                            <h3>* Anzahl:  </h3>
+                            <input id="productname" name="anzahl" type="text" placeholder="" required [(ngModel)]="myItem.stock">
+                        </div>
+                    </div>
+                    <div id="upload">
+                        <form method="post" action="upload.php" enctype="multipart/form-data">
+                            <h3> Datei  </h3>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                            <input type="file" name="datei" size="40" maxlength="100000">
+                        </form>
+                    </div>
                     <div id="btn_area">
-                    <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
-                    <button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>abbrechen</button>
+                        <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
+                        <button type="submit" routerLink="../">abbrechen</button>
                     </div>
                 </form>
             </div>
         </div>
-        </div>
-        </div>
+    </div>
+</div>

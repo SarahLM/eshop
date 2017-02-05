@@ -1,10 +1,11 @@
 <div class="body">
     <div class="dashboard">
         <div class="putArticle" data-success="Einen neuen Artikel wurde angelegt!">
-            <div *ngIf="showSuccess">Neuer Artikel angelegt!</div>
+           
             <h2 class="heading"> Produkt &Uuml;bersicht </h2>
             <div class="dashboard-form">
                 <form #f="ngForm" (ngSubmit)="putArticle(f)">
+                    <div *ngIf="showSuccess">Neuer Artikel angelegt!</div>
                     <h1>* Name: </h1>
                     <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required ngModel>
                     <br>
@@ -31,7 +32,7 @@
                                 <option value="Papier">Papier</option>
                                 <option value="Kleber">Kleber</option>
                                 <option value="Korrigieren">Korrigieren</option>
-                                <option value="Werkzeuge">Werkzeugt</option>
+                                <option value="Werkzeuge">Werkzeug</option>
                                 <option value="Schreibgeräte">Schreibgeräte</option>
                                 <option value="Malen&Zeichnen">Malen&Zeichnen</option>
                             </select>
