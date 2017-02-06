@@ -15,15 +15,21 @@ export class ProductPageComponent implements OnInit {
  
  id : string;
  myItems: ProductDivComponent[];
+ next : string;
+ myItem: ProductDivComponent[];
+ zahl: number;
 
 
   constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {
   	this.id = route.snapshot.params['id'];
-   }
+      this.zahl = parseInt(this.id)+1;
+      this.next = this.zahl.toString();
 
+   }
 
   ngOnInit() {
   	this.showProduct(this.id);
+    this.showProductrelated(this.next);
 
   }
 
@@ -34,4 +40,12 @@ export class ProductPageComponent implements OnInit {
                 error => console.log(error),
                 () => console.log(this.myItems));
       		};
+
+showProductrelated(next : string) {
+     this._dataService
+            .GetSingle(next)
+            .subscribe((myItem:ProductDivComponent[]) => this.myItem = myItem,
+                error => console.log(error),
+                () => console.log(this.myItem));
+          };
 }
