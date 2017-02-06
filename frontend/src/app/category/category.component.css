@@ -63,6 +63,9 @@ aside {
   text-align: center;
   margin-top: 3px;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-category, .product-preis {
@@ -118,4 +121,29 @@ p {
 
 .filter-text span {
   text-transform: uppercase;
+}
+
+
+/******* RESPONSIVE ******/
+/*** TABLET ***/
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+  aside, .sort, .filter {
+    width: 100%;
+    float: none;
+  }
+  section {
+    width: 100%;
+  }
+}
+
+/*** HANDY ***/
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  aside, .sort, .filter {
+    width: 100%;
+    float: none;
+  }
+  section {
+    width: 100%;
+  }
 }

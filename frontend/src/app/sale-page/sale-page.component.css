@@ -52,6 +52,9 @@ section:before, section:after {
   text-align: center;
   margin-top: 3px;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-category {
