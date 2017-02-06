@@ -1,11 +1,25 @@
 section {
   display: block;
   position: relative;
+  margin-bottom: 30px;
+  float: right;
+  width: 75%;
 }
 
 section:before, section:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+aside {
+  width: 25%;
+  float: left;
+}
+
+.sort, .filter {
+  width: 85%;
+  margin-bottom: 30px;
 }
 
 *:before, *:after {
@@ -49,6 +63,9 @@ section:before, section:after {
   text-align: center;
   margin-top: 3px;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-category, .product-preis {
@@ -58,4 +75,75 @@ section:before, section:after {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+/******* SORT & FILTER LIST ******/
+p {
+  text-transform: uppercase;
+  color: #32845B;
+  border-bottom: 1px solid #32845B;
+  padding-bottom: 5px;
+}
+
+.sort-item, .filter span {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #B2B2B2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sort-item li,
+.filter span {
+  padding-bottom: 5px;
+}
+
+.filter-text {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+.fa {
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+.fa:hover{
+  color: #5A9C7B;
+}
+
+.filter-header {
+  margin-bottom: 5px;
+}
+
+.filter-text span {
+  text-transform: uppercase;
+}
+
+
+/******* RESPONSIVE ******/
+/*** TABLET ***/
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+  aside, .sort, .filter {
+    width: 100%;
+    float: none;
+  }
+  section {
+    width: 100%;
+  }
+}
+
+/*** HANDY ***/
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  aside, .sort, .filter {
+    width: 100%;
+    float: none;
+  }
+  section {
+    width: 100%;
+  }
 }

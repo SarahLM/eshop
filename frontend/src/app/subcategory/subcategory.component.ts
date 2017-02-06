@@ -16,7 +16,8 @@ export class SubCategoryComponent implements OnInit {
 
   subCategoryName: string;
   private sub: any;
-
+  private isDisabled: boolean;
+  private isOpen: boolean = false;
   public myItems: ProductDivComponent [];
 
   constructor(private route : ActivatedRoute, private _dataService: dataService) {}
@@ -39,6 +40,12 @@ export class SubCategoryComponent implements OnInit {
                 error => console.log(error),
                 () => console.log(this.myItems));
 
+  }
+  toggleOpen(event) {
+    event.preventDefault();
+    if (!this.isDisabled) {
+      this.isOpen = !this.isOpen;
+    }
   }
 
  }

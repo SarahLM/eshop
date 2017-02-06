@@ -3,6 +3,49 @@
 <div class="body">
   <app-searchbar></app-searchbar>
 
+  <aside>
+    <div class="sort">
+      <p>sortieren nach:</p>
+      <ul class="sort-item">
+        <li>preis aufsteigend</li>
+        <li>preis absteigend</li>
+      </ul>
+    </div>
+
+    <div class="filter">
+      <p>filtern nach:</p>
+      <div class="filter-header">
+        <a href tabindex="0"><span (click)="toggleOpen($event)">Farbe</span></a>
+      </div>
+      <div class="filter-block" [hidden]="!isOpen">
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>rot</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>blau</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>gr&uuml;n</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>gelb</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>bunt</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>braun</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>transparent</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>wei&szlig;</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
 <section>
     <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
       <a class="link">
