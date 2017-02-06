@@ -5,6 +5,8 @@ import {ActivatedRoute } from '@angular/router';
 
 import { ProductDivComponent } from '../product-div/product-div.component';
 
+import { FilterPipe } from '../filter.pipe';
+
 @Component({
   selector: 'app-subcategory',
   providers: [dataService],
@@ -18,10 +20,7 @@ export class SubCategoryComponent implements OnInit {
 
   subCategoryName: string;
 
- 
-
   private sub: any;
-
   private isDisabled: boolean;
   private isOpen: boolean = false;
   public myItems: ProductDivComponent [];

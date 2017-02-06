@@ -15,14 +15,14 @@
     <div class="filter">
       <p>filtern nach:</p>
       <div class="filter-header">
-        <a href tabindex="0"><span (click)="toggleOpen($event)">Farbe</span></a>
+        <a href tabindex="0"><span (click)="toggleOpen($event)" >Farbe</span></a>
       </div>
       <div class="filter-block" [hidden]="!isOpen">
         <div class="filter-text">
-          <span [routerLink]="['/subcategory/color', 'rot']"><i class="fa fa-square-o"></i>rot</span>
+          <span ><i class="fa fa-square-o"></i>rot</span>
         </div>
         <div class="filter-text">
-          <span><i class="fa fa-square-o"></i>blau</span>
+          <span ><i class="fa fa-square-o"></i>blau</span>
         </div>
         <div class="filter-text">
           <span><i class="fa fa-square-o"></i>gr&uuml;n</span>
@@ -47,7 +47,10 @@
   </aside>
 
 <section>
-    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
+  <form>
+  <input type="text" ng-model="term"/>
+
+    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems | filter:term">
       <a class="link">
         <a [routerLink]="['/product-page', item.id]" class="product-imgwrapper">
           <img src="/assets/images/{{item.id}}.jpg">
@@ -58,6 +61,7 @@
         <h3 class="product-preis">{{item.price}}</h3>
       </a>
     </div>
+    </form>
 </section>
 
 </div>
