@@ -33,6 +33,7 @@ export const routes: Routes = [
   { path: 'category/:name', component: CategoryComponent  },
   { path: 'sale', component: SalePageComponent },
   { path: 'subcategory/:name', component: SubCategoryComponent  },
+
   { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'mitarbeiter-bereich', component: DashboardStartpageComponent },
   { path: 'mitarbeiter-bereich/add-product', component: DashboardProductpageComponent },

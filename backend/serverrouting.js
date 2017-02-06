@@ -56,6 +56,8 @@ app.get('/home', function(req, res) {
  app.delete('/deleteArticle/:id',putArticle.deleteArticle);
 
  app.get('/subcategory/:subcategory',getArticles.getArticlesfromSubCategory);
+ 
+ app.get('/subcategory/:color',getArticles.getArticlesfromSubCategory);
 
   app.get('/color/:color',getArticles.getArticlesByColor);
 

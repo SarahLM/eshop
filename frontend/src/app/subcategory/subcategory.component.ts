@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { dataService } from '../_services/dataService';
 import {ActivatedRoute } from '@angular/router';
+import {Pipe} from 'angular2/core';
 
 import { ProductDivComponent } from '../product-div/product-div.component';
 
@@ -14,11 +15,22 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 
 export class SubCategoryComponent implements OnInit {
 
+@Pipe({
+  name: 'colorPipe'
+})
+
   subCategoryName: string;
+
+ 
+
   private sub: any;
+
   private isDisabled: boolean;
   private isOpen: boolean = false;
   public myItems: ProductDivComponent [];
+
+
+
 
   constructor(private route : ActivatedRoute, private _dataService: dataService) {}
 
@@ -27,12 +39,18 @@ export class SubCategoryComponent implements OnInit {
       this.sub = this.route.params.subscribe(params => {
       this.subCategoryName = params['name'];
       this.getSubCategoryItems(this.subCategoryName);
-      
+
+
+ 
     });
+      
+    
     
   }
 
   private getSubCategoryItems(subCategoryName : string): void {
+
+
     
         this._dataService
             .ShowProductsSubCategory(subCategoryName)
@@ -41,6 +59,8 @@ export class SubCategoryComponent implements OnInit {
                 () => console.log(this.myItems));
 
   }
+
+
   toggleOpen(event) {
     event.preventDefault();
     if (!this.isDisabled) {

@@ -74,6 +74,9 @@ export class dataService {
 
             .catch(this.handleError);
   }
+
+
+
   public updateProducts = (id: string): Observable<ProductDivComponent> => {
     console.log(id + " aus dataService.")
     return this._http.get(this.actionUrl+"/getSingleArticle/"+ id)
