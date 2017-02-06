@@ -39,6 +39,7 @@ import { editproductComponent } from './editproduct/editproduct.component';
 import {SalePageComponent} from "./sale-page/sale-page.component";
 import {NewPageComponent} from "./new-page/new-page.component";
 import { FilterproductComponent } from './filterproduct/filterproduct.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { FilterproductComponent } from './filterproduct/filterproduct.component'
     CategoryComponent,
     SubCategoryComponent,
     editproductComponent,
-    FilterproductComponent
+    FilterproductComponent,
+    FilterPipe
 
   ],
   imports: [
