@@ -52,6 +52,9 @@ section:before, section:after {
   text-align: center;
   margin-top: 3px;
   display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .product-category {
@@ -64,7 +67,7 @@ section:before, section:after {
 }
 
 .product-preis {
-  color: #D24D57;
+  color: #5A9C7B;
   font-size: 20px;
   margin: 0px;
   display: block;

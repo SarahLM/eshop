@@ -4,8 +4,11 @@ section {
 }
 
 section:before, section:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
+  clear: both;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 *:before, *:after {
@@ -21,10 +24,14 @@ section:before, section:after {
 }
 
 .link {
-  min-height: 150px;
+  max-height: 250px;
   display: block;
   position: relative;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
+}
+
+.product-wrapper {
+  max-width: 100%;
 }
 
 .product-imgwrapper {
@@ -49,6 +56,9 @@ section:before, section:after {
   text-align: center;
   margin-top: 3px;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-category, .product-preis {
@@ -59,3 +69,5 @@ section:before, section:after {
   overflow: hidden;
   white-space: nowrap;
 }
+
+

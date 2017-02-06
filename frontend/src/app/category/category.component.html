@@ -19,14 +19,36 @@
       </div>
       <div class="filter-block" [hidden]="!isOpen">
         <div class="filter-text">
-          <div class="quadrat"></div></div> <span>blaaaaaa</span>
+          <span><i class="fa fa-square-o"></i>rot</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>blau</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>gr&uuml;n</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>gelb</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>bunt</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>braun</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>transparent</span>
+        </div>
+        <div class="filter-text">
+          <span><i class="fa fa-square-o"></i>wei&szlig;</span>
+        </div>
       </div>
     </div>
   </aside>
 
 
   <section>
-    <div class="col-md-3 col-sm-4 product" *ngFor="let item of myItems">
+    <div class="col-md-3 col-md-2 col-sm-1 product" *ngFor="let item of myItems">
       <a class="link">
         <a href="" class="product-imgwrapper">
           <img src="/assets/images/{{item.id}}.jpg">
