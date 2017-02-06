@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { dataService } from '../_services/dataService';
 import {ActivatedRoute } from '@angular/router';
-import {Pipe} from 'angular2/core';
 
 import { ProductDivComponent } from '../product-div/product-div.component';
 
@@ -15,9 +14,7 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 
 export class SubCategoryComponent implements OnInit {
 
-@Pipe({
-  name: 'colorPipe'
-})
+
 
   subCategoryName: string;
 
