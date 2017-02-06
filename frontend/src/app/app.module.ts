@@ -38,6 +38,7 @@ import { SubCategoryComponent } from "./subcategory/subcategory.component";
 import { editproductComponent } from './editproduct/editproduct.component';
 import {SalePageComponent} from "./sale-page/sale-page.component";
 import {NewPageComponent} from "./new-page/new-page.component";
+import { FilterproductComponent } from './filterproduct/filterproduct.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import {NewPageComponent} from "./new-page/new-page.component";
     AboutusComponent,
     CategoryComponent,
     SubCategoryComponent,
-    editproductComponent
+    editproductComponent,
+    FilterproductComponent
 
   ],
   imports: [
