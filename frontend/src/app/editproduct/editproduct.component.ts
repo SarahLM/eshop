@@ -39,9 +39,12 @@ export class editproductComponent implements OnInit {
 
   updateProduct(form: NgForm) {
 
-    this.http.put( "http://localhost:8080/update" , form.value ).subscribe((res) => {
-      console.log(res);
-    });
+    this.http.put( "http://localhost:8080/update" , form.value ).toPromise()
+    .then((res: Response) => {
+        console.log(res);
+        this.showSuccess = res["_body"] == "OK";
+          if (this.showSuccess) form.reset();
+  });
 
   }
   

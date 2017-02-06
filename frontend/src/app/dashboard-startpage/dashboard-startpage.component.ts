@@ -92,7 +92,6 @@ console.log(item);
 
 
 
-// http://stackoverflow.com/questions/36749153/how-to-i-load-json-data-into-angular2-component
 
   
 

@@ -7,6 +7,7 @@
             <!--<div class="email-input">-->
             <form #f="ngForm" (ngSubmit)="sendMail(f)">
                 <div class="form-group">
+                    <div *ngIf="showSuccess">Mail gesendet</div>
                     <input name="mail" id="mail" type="email" placeholder="" required ngModel>
                     <button type="submit" [disabled]="!f.valid"><span class="fa fa-envelope"></span>send email</button>
                 </div>
