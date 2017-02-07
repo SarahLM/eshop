@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ApplicationRef } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { dataService } from '../_services/dataService';
 import {ActivatedRoute } from '@angular/router';
 
 import { ProductDivComponent } from '../product-div/product-div.component';
-
 import { FilterPipe } from '../filter.pipe';
 
 @Component({
@@ -24,14 +23,17 @@ export class SubCategoryComponent implements OnInit {
   private isDisabled: boolean;
   private isOpen: boolean = false;
   public myItems: ProductDivComponent [];
+  public term: any;
+  public forceUpdate: number;
 
 
 
-
-  constructor(private route : ActivatedRoute, private _dataService: dataService) {}
+  constructor(private route : ActivatedRoute, private _dataService: dataService, private ar: ApplicationRef) {}
 
   ngOnInit() {
 
+      this.term = { "color": {}, "price": {} };
+      this.forceUpdate = 0;
       this.sub = this.route.params.subscribe(params => {
       this.subCategoryName = params['name'];
       this.getSubCategoryItems(this.subCategoryName);
@@ -56,6 +58,11 @@ export class SubCategoryComponent implements OnInit {
 
   }
 
+  applyFilter() {
+
+    this.forceUpdate++;
+
+  }
 
   toggleOpen(event) {
     event.preventDefault();

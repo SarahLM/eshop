@@ -38,9 +38,10 @@ import { SubCategoryComponent } from "./subcategory/subcategory.component";
 import { editproductComponent } from './editproduct/editproduct.component';
 import {SalePageComponent} from "./sale-page/sale-page.component";
 import {NewPageComponent} from "./new-page/new-page.component";
-//import { Pipe } from '@angular/core';
-//import { PipeTransform } from '@angular/core';
+
 import { FilterPipe } from './filter.pipe';
+//import { SearchPipe } from './search.pipe';
+
 
 
 
