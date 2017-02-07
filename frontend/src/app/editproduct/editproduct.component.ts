@@ -19,8 +19,13 @@ export class editproductComponent implements OnInit {
 	public showSuccess: boolean;
   private sub: any;
   public myItem: ProductDivComponent;
+  private actionUrl : String;
+ constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {
 
- constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {}
+  this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+    //this.actionUrl="http://localhost:8080";
+
+ }
 
   ngOnInit() {
 
@@ -39,7 +44,7 @@ export class editproductComponent implements OnInit {
 
   updateProduct(form: NgForm) {
 
-    this.http.put( "http://localhost:8080/update" , form.value ).toPromise()
+    this.http.put( this.actionUrl+"/update" , form.value ).toPromise()
     .then((res: Response) => {
         console.log(res);
         this.showSuccess = res["_body"] == "OK";

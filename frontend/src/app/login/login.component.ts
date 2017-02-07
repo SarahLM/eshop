@@ -15,14 +15,18 @@ export class LoginComponent implements OnInit {
 
   public showSuccess: boolean;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+    //  this.actionUrl="http://localhost:8080";
+
+ }
 
 
   loginSenden(form: NgForm) {
 
   	let username = form.value.username;
   	let password = form.value.passwordinput;
-  	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/login/' + username+'/'+ password).toPromise()
+  	this.http.get(this.actionUrl'/login/' + username+'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
         this.showSuccess = res["_body"] == "OK";

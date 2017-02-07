@@ -13,13 +13,20 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./dashboard-productpage.component.css']
 })
 export class DashboardProductpageComponent implements OnInit  {
+
+ private actionUrl: string;
+
 public showSuccess: boolean;
  constructor(private http: Http) {
+
+ 	this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+ 	//this.actionUrl="http://localhost:8080";
+
     
 }
 putArticle(form: NgForm) {
 
-	this.http.post( 'http://localhost:8080/putArticle', form.value ).toPromise()
+	this.http.post( this.actionUrl+'/putArticle', form.value ).toPromise()
 		.then((res: Response) => {
 	    	console.log(res);
 	    	this.showSuccess = res["_body"] == "OK";

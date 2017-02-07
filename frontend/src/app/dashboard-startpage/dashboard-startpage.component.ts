@@ -21,8 +21,14 @@ export class DashboardStartpageComponent implements OnInit {
 
   public myItems: ProductDivComponent [];
   public showSuccess: boolean;
+  private actionUrl : String;
 
-  constructor(private http: Http, private _dataService: dataService) { }
+  constructor(private http: Http, private _dataService: dataService) {
+  
+  this.actionUrl="http://projektwebshop.f4.htw-berlin.de";
+  //this.actionUrl="http://localhost:8080";
+
+   }
 
   ngOnInit() {
     this.getAllItems();
@@ -40,7 +46,7 @@ export class DashboardStartpageComponent implements OnInit {
 
   sendMail(form: NgForm) {
   	let mailReceiver = form.value.mail;
-  	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/SendMail/' + mailReceiver).toPromise()
+  	this.http.get(this.actionUrl+'/SendMail/' + mailReceiver).toPromise()
 	.then((res: Response) => {
     	this.showSuccess = res["_body"] == "OK";
       if (this.showSuccess) form.reset();
@@ -61,7 +67,7 @@ export class DashboardStartpageComponent implements OnInit {
 
   deleteArticle(item) {
     let id = item.id;
-    this.http.delete('http://localhost:8080/deleteArticle/' + id).subscribe((res) => {
+    this.http.delete(this.actionUrl+'/deleteArticle/' + id).subscribe((res) => {
       console.log(res);
     });
 }

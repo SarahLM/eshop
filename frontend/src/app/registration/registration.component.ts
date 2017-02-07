@@ -12,10 +12,14 @@ import { Http, Response } from '@angular/http'
 export class RegistrationComponent implements OnInit {
 
    id : string;
+   private actionUrl : string
    
   constructor(private route : ActivatedRoute,private http: Http ) {
 
     this.id = route.snapshot.params['id'];
+      this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+  //this.actionUrl="http://localhost:8080";
+
     
    
    }
@@ -23,7 +27,7 @@ registrierungSenden(form: NgForm) {
   	let invite = this.id;
   	let email = form.value.emailinput;
   	let password = form.value.passwordinput;
-  	this.http.get('http://projektwebshop.f4.htw-berlin.de:8080/registrierung/' + invite+'/' + email +'/'+ password).toPromise()
+  	this.http.get(this.actionUrl+'/registrierung/' + invite+'/' + email +'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
 	});
