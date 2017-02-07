@@ -127,7 +127,7 @@ p {
   display: none;
 }
 
-#search-bar:active .search_option {
+#search-bar:after .search_option {
   display: block;
 }
 

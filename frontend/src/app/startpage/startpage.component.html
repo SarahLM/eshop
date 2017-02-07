@@ -1,8 +1,18 @@
 <app-mainmenu></app-mainmenu>
 
 <div class="body">
-	<app-searchbar></app-searchbar>
-	<app-teaserbanner></app-teaserbanner>
+<div id="search-bar">
+  <form >
+  <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
+     <div class= "search_option">
+      <ul>
+        <li *ngFor="let item of myItems |Suche:begriff" >
+           <a [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>	<app-teaserbanner></app-teaserbanner>
 		<div class="wrapper">
 			<img src="/assets/images/top-product.png">
 		</div>

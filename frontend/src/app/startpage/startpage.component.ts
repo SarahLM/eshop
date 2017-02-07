@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { dataService } from '../_services/dataService';
 import { ProductDivComponent } from '../product-div/product-div.component';
+  import { SuchePipe } from '../suche.pipe'; 
+
 
 
 @Component({
@@ -12,9 +14,21 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 
 export class StartpageComponent implements OnInit {
 
-    constructor() { }
+  constructor(private _dataService: dataService) {}
+
+
+public myItems: ProductDivComponent [];
 
     ngOnInit() {
-    }
+    this.getAllItems();
+    
+  }
 
-}
+  private getAllItems(): void {
+        this._dataService
+            .GetAll()
+            .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
+                error => console.log(error),
+                () => console.log(this.myItems));
+    }
+ }
