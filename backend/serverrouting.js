@@ -33,6 +33,7 @@ var putArticle = require('./putArticle.js')
 var getSingleArticle = require('./getArticles.js')
 //var authe = require('./authe.js')
 var mailerConfig = require('./mailerConfig.js')
+var kontaktformular = require('./kontaktformular.js')
 var getArticles = require('./getArticles.js')
 var login = require ('./login.js')
 
@@ -86,6 +87,8 @@ app.get('/home', function(req, res) {
 
  //app.post('/Mail', handlerMail.registerCustomer);
  app.get('/SendMail/:nutzer', mailerConfig.sendingMail);
+
+ app.get('/kontaktformular/:nutzer', kontaktformular.sendingKontaktformular);
 
  app.get('/auth', auth.api);
 

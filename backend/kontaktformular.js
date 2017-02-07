@@ -3,19 +3,15 @@ var nodemailer = require('nodemailer')
 var pgp = require("pg-promise")(/*options*/);
 var db = pgp("postgres://webshopuser:nele+sarah@projektwebshop.f4.htw-berlin.de:5432/webshopdatabase");
 
-function sendingMail(req, res, next){
+function sendingKontaktformular(req, res, next){
 
-
-
-
-
-                //creating Transporter Object
-
-        /*var transporter = nodemailer.createTransport({name:'localhost',tls: {
+    //creating Transporter Object on Server:
+    /*var transporter = nodemailer.createTransport({name:'localhost',tls: {
         rejectUnauthorized: false}})*/
 
 
-        var smtpConfig = {
+    //creating Transporter Object local with gmail:
+    var smtpConfig = {
                     host: 'smtp.googlemail.com',
                     port: 587,
                     secure: false, // use SSL
@@ -25,32 +21,31 @@ function sendingMail(req, res, next){
                     }
                 };
 
-                //creating Transporter Object
+    var transporter = nodemailer.createTransport(smtpConfig)
 
-        var transporter = nodemailer.createTransport(smtpConfig)
 
- var irgendwas = db.any("SELECT createInvitecode();").then( function(status){
+        
+
+ var irgendwas = db.any("SELECT hallo();").then( function(status){
 
         var coder = {code :status[0].createinvitecode};
         console.log(coder.code);
-        /*var inhalt = <div>
-Herzlich Wilkommen neuer Mitarbeiter!</br>
-mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren.</div>*/
-        //var mailOptions = req.body.mailOptions;
+        
         var mailOptions = {
     //from: '"Onurs Bastelecke" <webshophtw@gmail.com>', // sender address
     from: 'Onurs Bastelecke',
     to: req.params.nutzer, // list of receivers
-    subject: 'Registrierung✔', // Subject line
+    subject: 'Ihre Nachricht an uns', // Subject line
     //text: 'Hier kannst du dich registrieren ', // plaintext body
-    html: '<div>Herzlich Willkommen neuer Mitarbeiter! Mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeiter registrieren</div></br>'+' <a href="http://projektwebshop.f4.htw-berlin.de:4200/registration/'+coder.code+'">registrieren</a>' // html body
+    //text: 'Hier kannst du dich registrieren ', // plaintext body
+    html: '<div>Vielen Dank für Ihre Nachricht! <br><br> Wir werden Ihnen so schnell wie möglich antworten. <br><br> Ihr Team von Onurs Bastelshop</div></br>' // html body
         };
 
         transporter.sendMail(mailOptions, function(error, info){
             if(error){
                 return console.log(error);
             }
-            console.log('Message sent: ' + info.response);
+            console.log('Kontaktformular sent');
 
 	});
 	
@@ -64,5 +59,5 @@ mit dem unten stehenden Link kannst du dich in unserer Bastelecke als Mitarbeite
  * Export to other node scripts
  */
    module.exports = {
-	sendingMail: sendingMail
+	sendingKontaktformular: sendingKontaktformular
 }
