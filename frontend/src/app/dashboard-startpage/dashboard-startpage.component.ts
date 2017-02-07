@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 
 import { DashboardProductpageComponent } from '../dashboard-productpage/dashboard-productpage.component';
 import { ProductDivComponent } from '../product-div/product-div.component';
+  import { SuchePipe } from '../suche.pipe'; 
 
 @Component({
  	selector: 'app-dashboard-startpage',

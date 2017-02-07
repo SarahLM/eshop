@@ -38,24 +38,18 @@ export class SubCategoryComponent implements OnInit {
       this.subCategoryName = params['name'];
       this.getSubCategoryItems(this.subCategoryName);
 
-
  
-    });
-      
-    
+    });    
     
   }
 
   private getSubCategoryItems(subCategoryName : string): void {
 
-
-    
         this._dataService
             .ShowProductsSubCategory(subCategoryName)
             .subscribe((myItems:ProductDivComponent[]) => this.myItems = myItems,
                 error => console.log(error),
                 () => console.log(this.myItems));
-
   }
 
   applyFilter() {

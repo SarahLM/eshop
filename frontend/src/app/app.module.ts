@@ -40,7 +40,7 @@ import {SalePageComponent} from "./sale-page/sale-page.component";
 import {NewPageComponent} from "./new-page/new-page.component";
 
 import { FilterPipe } from './filter.pipe';
-//import { SearchPipe } from './search.pipe';
+import { SuchePipe } from './suche.pipe';
 
 
 
@@ -76,7 +76,7 @@ import { FilterPipe } from './filter.pipe';
     CategoryComponent,
     SubCategoryComponent,
     editproductComponent,
-    //Pipe,
+    SuchePipe,
     FilterPipe
 
 

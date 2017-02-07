@@ -1,8 +1,12 @@
 <app-mainmenu></app-mainmenu>
 
 <div class="body">
-  <app-searchbar></app-searchbar>
-
+<div class="body">
+  <div>
+  <form >
+  <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
+  </form>
+</div>
   <aside>
     <div class="sort">
       <p>sortieren nach:</p>

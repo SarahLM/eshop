@@ -17,7 +17,7 @@
       margin-bottom: 3%; border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))"></div>
                 <h1>Produkte</h1>
                 <form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
-                    <input id="search_field" type="text" name="search" placeholder="Hier suchen.." required ngModel>
+                    <input id="search_field" type="text" name="search" placeholder="Hier suchen.." [(ngModel)]="term" required ngModel>
                     <select id="auswahl" name="auswahl" class="form-control" required ngModel>
                         <option>Alle Produkte</option>
                         <option>Papeterie</option>
@@ -39,7 +39,7 @@
                     <th></th>
                     <th></th>
                     <tr>
-                        <tr *ngFor="let item of myItems">
+                        <tr *ngFor="let item of myItems |Suche:term">
                             <td>{{item.name}}</td>
                             <td>{{item.category}}</td>
                             <td>{{item.price}}</td>
