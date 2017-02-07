@@ -38,11 +38,23 @@
         </div>
 
         <div class="filter-text">
+          <label><input type="checkbox" name="term.color.gelb" [(ngModel)]="term.color.gelb" (ngModelChange)="applyFilter()" class="fa fa-square-o">gelb</label>
+        </div>
+
+        <div class="filter-text">
+          <label><input type="checkbox" name="term.color.gruen" [(ngModel)]="term.color.gruen" (ngModelChange)="applyFilter()" class="fa fa-square-o">gruen</label>
+        </div>
+
+        <div class="filter-text">
           <label><input type="checkbox" name="term.color.blau" [(ngModel)]="term.color.blau" (ngModelChange)="applyFilter()" class="fa fa-square-o">blau</label>
         </div>
         
         <div class="filter-text">
           <label><input type="checkbox" name="term.color.schwarz" [(ngModel)]="term.color.schwarz" (ngModelChange)="applyFilter()" class="fa fa-square-o">schwarz</label>
+        </div>
+
+        <div class="filter-text">
+          <label><input type="checkbox" name="term.color.bunt" [(ngModel)]="term.color.bunt" (ngModelChange)="applyFilter()" class="fa fa-square-o">bunt</label>
         </div>
 
         <b> TEST </b>
@@ -63,7 +75,7 @@
           <label><input type="checkbox" name="term.price.p4" [(ngModel)]="term.price.p4" (ngModelChange)="applyFilter()" class="fa fa-square-o">ab 500€</label>
         </div>
 
-        <!-- ALTE FILTER OPTIONEN -->
+        <!-- ALTE FILTER OPTIONEN 
 
         <div class="filter-text">
           <span ><i class="fa fa-square-o"></i>rot</span>
@@ -88,7 +100,7 @@
         </div>
         <div class="filter-text">
           <span><i class="fa fa-square-o"></i>wei&szlig;</span>
-        </div>
+        </div>-->
       </div>
     </form>
     </div>
