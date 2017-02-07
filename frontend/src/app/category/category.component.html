@@ -6,7 +6,8 @@
   <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
   <ul *ngFor="let item of myItems |Suche:begriff">
                     <li >
-                        <a >{{item.name}}</a>
+                      <a [routerLink]="['/product-page', item.id]" class="">{{item.name}}
+                      </a>
                     </li>
                     
                 </ul>
