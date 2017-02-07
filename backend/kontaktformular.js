@@ -29,7 +29,7 @@ function sendingKontaktformular(req, res, next){
  var irgendwas = db.any("SELECT hallo();").then( function(status){
 
         var coder = {code :status[0].createinvitecode};
-        console.log(coder.code);
+        
         
         var mailOptions = {
     //from: '"Onurs Bastelecke" <webshophtw@gmail.com>', // sender address
