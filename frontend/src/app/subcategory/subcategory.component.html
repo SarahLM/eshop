@@ -1,12 +1,22 @@
 <app-mainmenu></app-mainmenu>
 
 <div class="body">
-<div class="body">
-  <div>
+  
+<div id="search-bar">
   <form >
-  <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
+  <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
+     <div class= "search_option">
+      <ul>
+        <li *ngFor="let item of myItems |Suche:begriff" >
+           <a [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
   </form>
 </div>
+
+
+
   <aside>
     <div class="sort">
       <p>sortieren nach:</p>

@@ -123,6 +123,14 @@ p {
   text-transform: uppercase;
 }
 
+.search_option {
+  display: none;
+}
+
+#search-bar:after .search_option {
+  display: block;
+}
+
 
 /******* RESPONSIVE ******/
 /*** TABLET ***/
