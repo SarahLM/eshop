@@ -144,6 +144,9 @@ input {
   .col-md-2, .col-lg-3 {
     width: 48%;
   }
+  .teaser {
+    max-height: 120px;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -160,7 +163,7 @@ input {
   #search_field {
     width: 100%;
   }
-  .fa-search {
+  .fa-search, .teaser {
     display: none;
   }
 }
@@ -174,7 +177,7 @@ input {
   .col-lg-2 {
     margin-bottom: 10px;
 }
-  .col-lg-2 img, .fa-search {
+  .col-lg-2 img, .fa-search, .teaser {
     display: none;
   }
 

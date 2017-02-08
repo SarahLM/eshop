@@ -78,9 +78,8 @@ section:before, section:after {
 }
 
 .teaser {
-  height: 300px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  height: 250px;
+  margin-bottom: 80px;
 }
 
 .teaserimg {
@@ -88,15 +87,3 @@ section:before, section:after {
   width: 100%;
 }
 
-/****** TEASER RESPONSIVE ******/
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .teaser {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  .teaser {
-    display: none;
-  }
-}

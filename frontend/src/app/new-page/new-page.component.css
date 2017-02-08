@@ -81,22 +81,10 @@ section:before, section:after {
   height: 300px;
   margin-top: 40px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .teaserimg {
   height: 100%;
-  width: 100%;
-}
-
-/****** TEASER RESPONSIVE ******/
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .teaser {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  .teaser {
-    display: none;
-  }
+  width: 95%;
 }
