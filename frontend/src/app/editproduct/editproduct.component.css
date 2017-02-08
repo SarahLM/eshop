@@ -85,7 +85,9 @@
 .dashboard-form[_ngcontent-doh-4] {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-
+#btn1{
+    margin-top: 2px;
+}
 #btn_area {
     margin-top: 5%;
     float:left;

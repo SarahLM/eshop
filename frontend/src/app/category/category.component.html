@@ -4,11 +4,11 @@
   <div id="search_bar">
     <form>
       <i class="fa fa-search"></i>
-      <input (keyup)="onKey($event)" id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
+      <input (keyup)="onKey($event)" on-wheel="weg($event)"  id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
 
       <div id="search_option">
         <ul id="liste" *ngFor="let item of myItems |Suche:begriff">
-          <li id="list" (click)="onclick($event)">
+          <li id="list" on-wheel="weg($event)">
             <a [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
           </li>
         </ul>

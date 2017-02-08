@@ -69,7 +69,7 @@ span .fa {
 .key,
 .detail p b {
   color: #B2B2B2;
-  text-transform: uppercase;
+  
   font-weight: normal;
   font-size: 10px;
 }
@@ -99,7 +99,7 @@ span .fa {
 
 .detail p b {
   margin-bottom: 6px;
-  text-transform: uppercase;
+  
   display: block;
 }
 

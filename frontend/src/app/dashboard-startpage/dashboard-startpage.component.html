@@ -44,7 +44,7 @@
                         <tr *ngFor="let item of myItems |Suche:term">
                             <td>{{item.name}}</td>
                             <td>{{item.category}}</td>
-                            <td>{{item.price}}</td>
+                            <td>{{item.price}} &#x20AC;</td>
                             <td><a [routerLink]="['edit-product', item.id]">Bearbeiten</a></td>
                             <td>
                                 <button (click)="deleteArticle(item)">L&ouml;schen</button>
