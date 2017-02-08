@@ -12,7 +12,7 @@
                     <input id="productname" name="productname" type="text" placeholder="Produktname eingeben" required [(ngModel)]="myItem.name">
                     <br>
                     <h3>* ID: </h3>
-                    <input id="productname" name="productid" type="text" placeholder="ID eingeben" required [(ngModel)]="myItem.id">
+                    <input id="productname" name="productid" type="text" placeholder="ID eingeben" required [(ngModel)]="myItem.id" disabled>
                     <br>
                     <div id="select-boxen">
                         <div id="left">
@@ -77,8 +77,8 @@
                         </form>
                     </div>
                     <div id="btn_area">
-                        <button type="submit" [disabled]="!f.valid"><span></span>anlegen</button>
-                        <button type="submit" routerLink="../">abbrechen</button>
+                        <button type="submit" [disabled]="!f.valid"><span></span>ändern</button>
+                        <button type="submit" routerLink="/mitarbeiter-bereich">abbrechen</button>
                     </div>
                 </form>
             </div>
