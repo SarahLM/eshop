@@ -1,90 +1,36 @@
-<nav class="nav">
-    <ul class="first-ul">
-        <!-- E Papeterie -->
-        <li class="nav-item">
-            <a [routerLink]="['/category', 'Papeterie']">PAPETERIE</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <div>
-                        <ul>
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Kalendar & Terminkalendar']">Kalender&Terminplaner</a></li>
-
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Papier']">Papier</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- E Ordnen -->
-        <li class="nav-item">
-            <a [routerLink]="['/category', 'Ordnen']">ORDNEN</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <div>
-                        <ul>
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Ordner']">Ordner</a></li>
-
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Hefter']">Hefter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- E Schreibwaren -->
-        <li class="nav-item">
-            <a [routerLink]="['/category', 'Schreibwaren']">SCHREIBWAREN</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <div>
-                        <ul>
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Schreibgeräte']">Schreibgeräte</a></li>
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Korrigieren']">Korrigieren</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- E Künstlerbedarf -->
-        <li class="nav-item">
-            <a [routerLink]="['/category', 'Künstlerbedarf']">K&Uuml;NSTLERBEDARF</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <div>
-                        <ul>
-                            <li><a class="subcat" [routerLink]="['/subcategory', 'Malen & Zeichnen']">Malen&Zeichnen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- E Basteln -->
-        <li class="nav-item">
-            <a [routerLink]="['/category', 'Basteln']">BASTELN</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <div>
-                        <ul>
-                            <li> <a class="subcat" [routerLink]="['/subcategory', 'Kleber']">Kleber</a></li>
-
-                            <li> <a class="subcat" [routerLink]="['/subcategory', 'Werkzeuge']">Werkzeuge</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- E BASTELN -->
-      <li class="nav-item">
-            <a [routerLink]="['/neuheiten']">NEUHEITEN</a>
-            
-        </li>
-      <!-- E NEUHEITEN -->
-        <li class="nav-item">
-          <a [routerLink]="['/sale']">SALE%</a>
-            
-        </li>
-        <!-- E SALE -->
-        <li class="nav-itemCart">
-            <a href="http://localhost:4200/cart"><span class="fa fa-shopping-bag"></span></a>
-        </li>
+<ul id="menu">
+<div id="center">
+    <li> <a [routerLink]="['/category', 'Papeterie']">PAPETERIE</a>
+        <ul>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Kalendar & Terminkalendar']">Kalender&Terminplaner</a></li>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Papier']">Papier</a></li>
+        </ul>
+    </li>
+    <li><a [routerLink]="['/category', 'Ordnen']">ORDNEN</a>
+        <ul>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Ordner']">Ordner</a></li>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Hefter']">Hefter</a></li>
+        </ul>
+    </li>
+    <li> <a [routerLink]="['/category', 'Schreibwaren']">SCHREIBWAREN</a>
+        <ul>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Schreibgeräte']">Schreibgeräte</a></li>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Korrigieren']">Korrigieren</a></li>
+        </ul>
+    </li>
+    <li> <a [routerLink]="['/category', 'Künstlerbedarf']">K&Uuml;NSTLERBEDARF</a>
+        <ul>
+            <li><a class="subcat" [routerLink]="['/subcategory', 'Malen & Zeichnen']">Malen&Zeichnen</a></li>
+        </ul>
+    </li>
+    <li> <a [routerLink]="['/category', 'Basteln']">BASTELN</a>
+    <ul>
+        <li> <a class="subcat" [routerLink]="['/subcategory', 'Kleber']">Kleber</a></li>
+        <li> <a class="subcat" [routerLink]="['/subcategory', 'Werkzeuge']">Werkzeuge</a></li>
     </ul>
-</nav>
+    </li>
+    <li> <a [routerLink]="['/neuheiten']">NEUHEITEN</a></li>
+    <li> <a [routerLink]="['/sale']">SALE%</a></li>
+    <li> <a href="http://localhost:4200/cart"><span class="fa fa-shopping-bag"></span></a></li>
+    </div>
+</ul>
