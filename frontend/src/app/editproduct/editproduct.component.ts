@@ -22,8 +22,8 @@ export class editproductComponent implements OnInit {
   private actionUrl : String;
  constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {
 
-  //this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
-    this.actionUrl="http://localhost:8080";
+  this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+    //this.actionUrl="http://localhost:8080";
 
  }
 

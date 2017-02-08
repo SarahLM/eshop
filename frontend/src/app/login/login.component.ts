@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   public weiter : boolean;
 
   constructor(private http: Http, private router: Router) {
-    //this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
-    this.actionUrl="http://localhost:8080";
+    this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+    //this.actionUrl="http://localhost:8080";
 
  }
 
