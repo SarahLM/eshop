@@ -88,6 +88,17 @@ button:hover, button:active, button:focus {
   color: #E9E9E9;
 }
 
+#list{
+  list-style-type: none;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#search_option{
+  display: none;
+}
+
+
 /************* TEASER *************/
 .teaser {
   width: 90%;
