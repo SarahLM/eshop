@@ -31,4 +31,13 @@ public myItems: ProductDivComponent [];
                 error => console.log(error),
                 () => console.log(this.myItems));
     }
+
+    onKey(event: any) {
+    document.getElementById("search_option").style.display = "block";
+}
+
+    weg($event) {
+      document.getElementById("search_option").style.display = "none";
+    }
+
  }

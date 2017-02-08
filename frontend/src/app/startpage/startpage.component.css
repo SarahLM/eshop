@@ -8,3 +8,12 @@
 	margin: 50px auto 10px;
 }
 
+#list{
+	list-style-type: none;
+	font-size: 11px;
+}
+
+
+#search_option{
+		 display: none;
+}
