@@ -1,22 +1,23 @@
 <app-mainmenu></app-mainmenu>
-
 <div class="body">
-<div id="search-bar">
-  <form >
-  <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
-     <div class= "search_option">
-      <ul>
-        <li *ngFor="let item of myItems |Suche:begriff" >
-           <a [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
-        </li>
-      </ul>
+    <div id="search_bar">
+        <form>
+            <input id="search_field" (keyup)="onKey($event)" on-mouseout="weg($event)"  type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
+            
+            <div id="search_option">
+                <ul id="liste">
+                    <li id="list" *ngFor="let item of myItems |Suche:begriff">
+                        <a class="dinger" [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
     </div>
-  </form>
-</div>	<app-teaserbanner></app-teaserbanner>
-		<div class="wrapper">
-			<img src="/assets/images/top-product.png">
-		</div>
-	<app-product-div></app-product-div>
+    <app-teaserbanner></app-teaserbanner>
+    <div class="wrapper">
+        <img src="/assets/images/top-product.png">
+    </div>
+    <app-product-div></app-product-div>
 </div>
-
 <app-footer></app-footer>
+
