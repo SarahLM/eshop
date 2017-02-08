@@ -45,19 +45,19 @@ export class FilterPipe {
 							switch(filterTerm.toLowerCase()){
 
 								case "p1":
-									if ( item.price <= 10 ) { priceFilter++; }
+									if ( item.price <= 5 ) { priceFilter++; }
 									break;
 
 								case "p2":
-									if ( item.price > 10 && item.price <= 100 ) { priceFilter++; }
+									if ( item.price > 5 && item.price <= 10 ) { priceFilter++; }
 									break;
 
 								case "p3":
-									if ( item.price > 100 && item.price <= 500 ) { priceFilter++; }
+									if ( item.price > 10 && item.price <= 20 ) { priceFilter++; }
 									break;
 
 								case "p4":
-									if ( item.price > 500 ) { priceFilter++; }
+									if ( item.price > 20 ) { priceFilter++; }
 									break;	
 							}
 
