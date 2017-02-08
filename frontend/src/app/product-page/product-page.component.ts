@@ -5,7 +5,6 @@ import { Http, Response } from '@angular/http';
 import {dataService} from '../_services/dataService';
 import { ProductDivComponent } from '../product-div/product-div.component';
 
-
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -13,12 +12,14 @@ import { ProductDivComponent } from '../product-div/product-div.component';
 })
 export class ProductPageComponent implements OnInit {
  
+ name :string;
  id : string;
  myItems: ProductDivComponent[];
  next : string;
  myItem: ProductDivComponent[];
  zahl: number;
-
+public recentItem = "None";
+public cart = [];
 
   constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {
   	this.id = route.snapshot.params['id'];
@@ -48,4 +49,14 @@ showProductrelated(next : string) {
                 error => console.log(error),
                 () => console.log(this.myItem));
           };
+
+selectedItem(item){
+
+      alert (item + 'produkt hinzugefügt');
+      this.recentItem = item ;
+      this.cart.push(item);
+      this.name = item;
+      //localStorage.setItem=(item,JSON.stringify(this.cart));
+      localStorage.setItem(this.name,this.cart);
+  }
 }
