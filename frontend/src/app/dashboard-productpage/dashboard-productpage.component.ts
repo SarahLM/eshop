@@ -25,12 +25,15 @@ public showSuccess: boolean;
     
 }
 putArticle(form: NgForm) {
-
-	this.http.post( this.actionUrl+'/putArticle', form.value ).toPromise()
+	this.http.post(this.actionUrl+'/putArticle', form.value).toPromise()
 		.then((res: Response) => {
 	    	console.log(res);
 	    	this.showSuccess = res["status"] == 200;
-      		if (this.showSuccess) form.reset();
+      		if (this.showSuccess){
+      		 location.reload();}
+      		 else {
+      		 alert ('ID bereits verwendet')
+      		 }
 	});
 
 };
