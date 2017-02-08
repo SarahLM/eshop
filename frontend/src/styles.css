@@ -75,16 +75,51 @@ button:hover, button:active, button:focus {
 	border: 1px solid #006633;
 	color: #006633;
 }
+
+/************* SEARCH BAR **************/
+#search_bar {
+  margin: 30px 0px 30px 0px;
+  width: 100%;
+}
+
+.fa-search {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #E9E9E9;
+}
+
+#list{
+  list-style-type: none;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#search_option{
+  display: none;
+}
+
+
+/************* TEASER *************/
+.teaser {
+  width: 90%;
+  margin-bottom: 10%;
+  padding: 0px 70px 0px 70px;
+}
+
+.teaserimg {
+  height: auto;
+  max-width: 100%;
+}
+
 /************* INPUT ************/
 input {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 12px;
 	outline: 0;
-  	background: #FFFFFF;
-  	width: 95%;
-  	border: 1px solid #E9E9E9;
-  	padding: 8px;
-  	box-sizing: border-box;
+  background: #FFFFFF;
+  width: 95%;
+  border: 1px solid #E9E9E9;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 /************* MESSAGE A ************/
@@ -118,6 +153,10 @@ input {
   .col-lg-4 {
     width: 24%;
   }
+  .teaser {
+    max-width: 100%;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 1025px)  {
 	.col-md-2, .col-md-3, .col-md-4, .col-md-10, .col-lg-2, .col-lg-4 {
@@ -132,6 +171,11 @@ input {
   .col-md-2, .col-lg-3 {
     width: 48%;
   }
+  .teaser {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -145,20 +189,33 @@ input {
 	.col-md-3 {
 	    width: 100%;  float: left;
 	}
+  #search_field {
+    width: 100%;
+  }
+  .fa-search, .teaser {
+    display: none;
+  }
 }
 
 /*** HANDY ***/
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
 	.col-sm-1 {
 	    width: 100%;
 	    float: left;
 	}
-
   .col-lg-2 {
     margin-bottom: 10px;
 }
-  .col-lg-2 img {
+  .col-lg-2 img, .fa-search, .teaser {
     display: none;
+  }
+
+  #search_field {
+    width: 100%;
+  }
+
+  .teaserblock-text {
+    border: 1px solid #E9E9E9;
   }
 }
 

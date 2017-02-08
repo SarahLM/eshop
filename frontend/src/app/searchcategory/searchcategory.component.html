@@ -1,8 +1,8 @@
 <app-mainmenu></app-mainmenu>
 
 <div class="body">
-  
-<div id="search-bar">
+
+<div id="search_bar">
   <form >
   <input id="search_field" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff" >
      <div class= "search_option">
@@ -43,7 +43,7 @@
         <div class="filter-text">
           <label><input type="checkbox" name="term.color.blau" [(ngModel)]="term.color.blau" (ngModelChange)="applyFilter()" class="fa fa-square-o">blau</label>
         </div>
-        
+
         <div class="filter-text">
           <label><input type="checkbox" name="term.color.schwarz" [(ngModel)]="term.color.schwarz" (ngModelChange)="applyFilter()" class="fa fa-square-o">schwarz</label>
         </div>
@@ -57,7 +57,7 @@
         <div class="filter-text">
           <label><input type="checkbox" name="term.price.p2" [(ngModel)]="term.price.p2" (ngModelChange)="applyFilter()" class="fa fa-square-o">10€ - 100€</label>
         </div>
-        
+
         <div class="filter-text">
           <label><input type="checkbox" name="term.price.p3" [(ngModel)]="term.price.p3" (ngModelChange)="applyFilter()" class="fa fa-square-o">100€ - 500€</label>
         </div>
@@ -105,7 +105,7 @@
         <a [routerLink]="['/product-page', item.id]" class="product-imgwrapper">
           <img src="/assets/images/{{item.id}}.jpg">
         </a>
-      
+
         <h3 class="product-category">{{item.id}}</h3>
         <h2 class="product-category-title">{{item.name}}</h2>
         <h3 class="product-preis">{{item.price}}</h3>

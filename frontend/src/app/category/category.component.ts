@@ -3,7 +3,7 @@ import { dataService } from '../_services/dataService';
 import { ActivatedRoute } from '@angular/router';
 import { ProductDivComponent } from '../product-div/product-div.component';
 import { FilterPipe } from '../filter.pipe';
-  import { SuchePipe } from '../suche.pipe'; 
+  import { SuchePipe } from '../suche.pipe';
 
 
 @Component({
@@ -58,6 +58,18 @@ applyFilter() {
     if (!this.isDisabled) {
       this.isOpen = !this.isOpen;
     }
+  }
+
+  onKey(event: any) {
+    document.getElementById("search_option").style.display = "block";
+  }
+
+  onclick($event) {
+    document.getElementById("search_option").style.display = "none";
+  }
+
+  weg($event) {
+    document.getElementById("search_option").style.display = "none";
   }
 
 }

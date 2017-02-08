@@ -106,21 +106,25 @@ p {
   width: 100%;
 }
 
-.fa {
-  margin-right: 10px;
-  font-size: 10px;
-}
-
-.fa:hover{
-  color: #5A9C7B;
-}
-
 .filter-header {
   margin-bottom: 5px;
 }
 
 .filter-text span {
   text-transform: uppercase;
+}
+
+.filter-text input {
+  width: 15px;
+}
+.filter-text input:hover {
+  cursor: pointer;
+  border: 1px solid #32845B;
+}
+
+.filter-text label {
+  font-size: 11px;
+  color: #B2B2B2;
 }
 
 .search_option {
