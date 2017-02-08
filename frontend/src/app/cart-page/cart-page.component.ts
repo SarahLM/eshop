@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
 })
 export class CartPageComponent  {
 
+public cart = JSON.parse(localStorage.getItem("test"));
+
   constructor() { }
 
 

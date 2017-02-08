@@ -26,12 +26,19 @@
           </div>
           <p><b>{{item.info}}</b></p>
           <div class="item-specification-preis">{{item.price}}</div>
+          
+    
       </div>
+      <div class="buy-btn">
+  <button (click)="selectedItem(item.name)"> in den Warenkorb </button>
+  
+
+  </div>
   </div>
 
-  <div class="buy-btn">
-  <button> in den Warenkorb </button>
-  </div>
+  
+
+  
 
   <hr class="visible-lg">
 
@@ -40,7 +47,7 @@
     <h1>Related products</h1>
     <div class="col-md-3 col-sm-4 product">
       <a class="link">
-        <a href="" class="product-imgwrapper">
+        <a [routerLink]="['/product-page', item.id]" class="product-imgwrapper">
           <img src="/assets/images/{{item.id}}.jpg">
         </a>
         <h3 class="product-category">{{item.category}}</h3>
