@@ -1,12 +1,11 @@
 <app-mainmenu></app-mainmenu>
 <div class="body">
-    <div id="search_bar">
+    <div id="search_bar" on-wheel="weg($event)">
         <form>
-            <input id="search_field" (keyup)="onKey($event)" on-mouseout="weg($event)"  type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
-            
+            <input id="search_field" (keyup)="onKey($event)"  type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
             <div id="search_option">
                 <ul id="liste">
-                    <li id="list" *ngFor="let item of myItems |Suche:begriff">
+                    <li id="list" (click)="onclick($event)"  *ngFor="let item of myItems |Suche:begriff">
                         <a class="dinger" [routerLink]="['/product-page', item.id]" class="">{{item.name}}</a>
                     </li>
                 </ul>
@@ -20,4 +19,3 @@
     <app-product-div></app-product-div>
 </div>
 <app-footer></app-footer>
-

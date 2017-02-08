@@ -36,6 +36,10 @@ public myItems: ProductDivComponent [];
     document.getElementById("search_option").style.display = "block";
 }
 
+    onclick($event) {
+      document.getElementById("search_option").style.display = "none";
+    }
+
     weg($event) {
       document.getElementById("search_option").style.display = "none";
     }
