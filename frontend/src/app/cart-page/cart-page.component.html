@@ -1,15 +1,21 @@
 <app-mainmenu xmlns="http://www.w3.org/1999/html"></app-mainmenu>
-
-<div class="body">
-  <h1>Warenkorb</h1>
-
-
-Cart: 
-<ul *ngFor="let items of cart">
-<li>{{items.name}} {{items.price}}</li>
-  </ul>
-
+<div id="body">
+    <h1>Warenkorb</h1>
+    <table class="table">
+        <tr>
+            <th>Artikel: </th>
+            <th>Preis</th>
+        </tr>
+          <tfoot>
+    <tr>
+      <td>Gesamt: </td>
+      <td>€€€</td>
+    </tr>
+  </tfoot>
+        <tr *ngFor="let items of cart">
+            <td>{{items.name}}</td>
+            <td>{{items.price}} &#x20AC;</td>
+        </tr>
+    </table>
 </div>
-
 <app-footer></app-footer>
-
