@@ -23,6 +23,7 @@ export class DashboardStartpageComponent implements OnInit {
   public showSuccess: boolean;
   private actionUrl : String;
 
+
   constructor(private http: Http, private _dataService: dataService) {
   
   this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
@@ -69,6 +70,9 @@ export class DashboardStartpageComponent implements OnInit {
     let id = item.id;
     this.http.delete(this.actionUrl+'/deleteArticle/' + id).subscribe((res) => {
       console.log(res);
+      this.showSuccess = res["status"] == 200;
+      if (this.showSuccess) alert('Artikel gelöscht');
+      location.reload();
     });
 }
 
