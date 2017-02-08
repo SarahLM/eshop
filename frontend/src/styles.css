@@ -88,6 +88,18 @@ button:hover, button:active, button:focus {
   color: #E9E9E9;
 }
 
+/************* TEASER *************/
+.teaser {
+  width: 90%;
+  margin-bottom: 10%;
+  padding: 0px 70px 0px 70px;
+}
+
+.teaserimg {
+  height: auto;
+  max-width: 100%;
+}
+
 /************* INPUT ************/
 input {
 	font-size: 12px;
@@ -130,6 +142,10 @@ input {
   .col-lg-4 {
     width: 24%;
   }
+  .teaser {
+    max-width: 100%;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 1025px)  {
 	.col-md-2, .col-md-3, .col-md-4, .col-md-10, .col-lg-2, .col-lg-4 {
@@ -145,7 +161,9 @@ input {
     width: 48%;
   }
   .teaser {
-    max-height: 120px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
   }
 }
 

@@ -77,13 +77,4 @@ section:before, section:after {
   white-space: nowrap;
 }
 
-.teaser {
-  height: 250px;
-  margin-bottom: 80px;
-}
-
-.teaserimg {
-  height: 100%;
-  width: 100%;
-}
 
