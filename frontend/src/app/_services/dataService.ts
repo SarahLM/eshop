@@ -16,6 +16,8 @@ export class dataService {
 
   constructor(private _http: Http) {
     this.actionUrl = "http://localhost:8080";
+    //this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+
 
     //this.headers.append('Content-Type', 'application/json');
     //this.headers.append('Accept', 'application/json');
