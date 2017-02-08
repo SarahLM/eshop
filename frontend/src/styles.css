@@ -75,16 +75,28 @@ button:hover, button:active, button:focus {
 	border: 1px solid #006633;
 	color: #006633;
 }
+
+/************* SEARCH BAR **************/
+#search_bar {
+  margin: 30px 0px 30px 0px;
+  width: 100%;
+}
+
+.fa-search {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #E9E9E9;
+}
+
 /************* INPUT ************/
 input {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 12px;
 	outline: 0;
-  	background: #FFFFFF;
-  	width: 95%;
-  	border: 1px solid #E9E9E9;
-  	padding: 8px;
-  	box-sizing: border-box;
+  background: #FFFFFF;
+  width: 95%;
+  border: 1px solid #E9E9E9;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 /************* MESSAGE A ************/
@@ -145,6 +157,12 @@ input {
 	.col-md-3 {
 	    width: 100%;  float: left;
 	}
+  #search_field {
+    width: 100%;
+  }
+  .fa-search {
+    display: none;
+  }
 }
 
 /*** HANDY ***/
@@ -153,12 +171,19 @@ input {
 	    width: 100%;
 	    float: left;
 	}
-
   .col-lg-2 {
     margin-bottom: 10px;
 }
-  .col-lg-2 img {
+  .col-lg-2 img, .fa-search {
     display: none;
+  }
+
+  #search_field {
+    width: 100%;
+  }
+
+  .teaserblock-text {
+    border: 1px solid #E9E9E9;
   }
 }
 

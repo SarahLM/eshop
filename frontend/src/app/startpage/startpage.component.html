@@ -1,7 +1,10 @@
 <app-mainmenu></app-mainmenu>
+
 <div class="body">
+
     <div id="search_bar" on-wheel="weg($event)">
         <form>
+            <i class="fa fa-search"></i>
             <input id="search_field" (keyup)="onKey($event)"  type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
             <div id="search_option">
                 <ul id="liste">
@@ -12,10 +15,15 @@
             </div>
         </form>
     </div>
+
     <app-teaserbanner></app-teaserbanner>
+
     <div class="wrapper">
         <img src="/assets/images/top-product.png">
     </div>
+
     <app-product-div></app-product-div>
+
 </div>
+
 <app-footer></app-footer>

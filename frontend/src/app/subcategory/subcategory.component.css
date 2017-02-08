@@ -106,15 +106,6 @@ p {
   width: 100%;
 }
 
-.fa {
-  margin-right: 10px;
-  font-size: 10px;
-}
-
-.fa:hover{
-  color: #5A9C7B;
-}
-
 .filter-header {
   margin-bottom: 5px;
 }

@@ -106,12 +106,12 @@ p {
   width: 100%;
 }
 
-.fa {
+.fa-square-o {
   margin-right: 10px;
   font-size: 10px;
 }
 
-.fa:hover{
+.fa-square-o:hover{
   color: #5A9C7B;
 }
 
