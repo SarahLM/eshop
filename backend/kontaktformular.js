@@ -38,7 +38,8 @@ function sendingKontaktformular(req, res, next){
     subject: 'Ihre Nachricht an uns', // Subject line
     //text: 'Hier kannst du dich registrieren ', // plaintext body
     //text: 'Hier kannst du dich registrieren ', // plaintext body
-    html: '<div>Vielen Dank für Ihre Nachricht! <br><br> Wir werden Ihnen so schnell wie möglich antworten. <br><br> Ihr Team von Onurs Bastelshop</div></br>' // html body
+    html: '<div>Hallo '+req.params.nachricht+' Vielen Dank für deine Nachricht! <br>'+
+    '<br> Wir werden dir so schnell wie möglich antworten. <br><br> Dein Team von Onurs Bastelshop</div></br>' // html body
         };
 
         transporter.sendMail(mailOptions, function(error, info){

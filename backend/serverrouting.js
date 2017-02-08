@@ -89,7 +89,7 @@ app.get('/home', function(req, res) {
  //app.post('/Mail', handlerMail.registerCustomer);
  app.get('/SendMail/:nutzer', mailerConfig.sendingMail);
 
- app.get('/kontaktformular/:nutzer', kontaktformular.sendingKontaktformular);
+ app.get('/kontaktformular/:nutzer/:nachricht', kontaktformular.sendingKontaktformular);
 
 app.get('/passwortVergessen/:nutzer', passwortVergessen.sendingPassword);
 
