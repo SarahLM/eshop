@@ -20,17 +20,22 @@ export class ProductPageComponent implements OnInit {
  zahl: number;
 public recentItem = "None";
 public cart = [];
+  private sub: any;
 
   constructor(private http: Http, private route : ActivatedRoute, private _dataService: dataService) {
-  	this.id = route.snapshot.params['id'];
-      this.zahl = parseInt(this.id)+1;
-      this.next = this.zahl.toString();
 
    }
 
   ngOnInit() {
-  	this.showProduct(this.id);
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+          this.showProduct(this.id);
+      this.zahl = parseInt(this.id)+1;
+      this.next = this.zahl.toString();
     this.showProductrelated(this.next);
+    var cart = JSON.parse(localStorage.getItem("cartItems"));
+    if ( Array.isArray(cart) ) { this.cart = cart };
+    });
 
   }
 
@@ -52,11 +57,11 @@ showProductrelated(next : string) {
 
 selectedItem(item){
 
-      alert (item + 'produkt hinzugefügt');
-      this.recentItem = item ;
+      alert (item.name + ' produkt hinzugefügt');
+      this.recentItem = item.name;
+      this.name = item.name;
       this.cart.push(item);
-      this.name = item;
-      //localStorage.setItem=(item,JSON.stringify(this.cart));
-      localStorage.setItem(this.name,this.cart);
+      localStorage.setItem( 'cartItems', JSON.stringify(this.cart) );
+
   }
 }
