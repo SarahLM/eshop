@@ -14,10 +14,11 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   public showSuccess: boolean;
+  private actionUrl : string;
 
   constructor(private http: Http) {
-    this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
-    //  this.actionUrl="http://localhost:8080";
+    //this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
+    this.actionUrl="http://localhost:8080";
 
  }
 
@@ -26,10 +27,10 @@ export class LoginComponent implements OnInit {
 
   	let username = form.value.username;
   	let password = form.value.passwordinput;
-  	this.http.get(this.actionUrl'/login/' + username+'/'+ password).toPromise()
+  	this.http.get(this.actionUrl+'/login/'+ username+'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
-        this.showSuccess = res["_body"] == "OK";
+        this.showSuccess = res["_body"] == "erfolgreich eingeloggt";
       if (this.showSuccess) form.reset();
 	});
    }

@@ -6,14 +6,14 @@
   		<h2>Als Mitarbeiter anmelden</h2>
       <div class="loginSenden" data-success="eingeloggt">
 
-          <div *ngIf="showSuccess">eingeloggt</div>
 
       <form #f="ngForm" (ngSubmit)="loginSenden(f)"class="register-form">
+                  <div *ngIf="showSuccess">eingeloggt</div>
+
       		<input name="username" type="text" placeholder="email angeben" required ngModel/>
-      		<input name="password" type="password" placeholder="password angeben"required ngModel/>
+      		<input name="passwordinput" type="password" placeholder="password angeben"required ngModel/>
       		<p class="secondarymsg"><a href="#">Passwort vergessen?</a></p>
       		<button id="primarybtn">anmelden</button>
    		</form>
 	</div>
-	<p class="message"><a href="#">Konto erstellen</a></p>
 </div>

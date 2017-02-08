@@ -25,7 +25,7 @@ export class DashboardStartpageComponent implements OnInit {
 
   constructor(private http: Http, private _dataService: dataService) {
   
-  this.actionUrl="http://projektwebshop.f4.htw-berlin.de";
+  this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
   //this.actionUrl="http://localhost:8080";
 
    }
