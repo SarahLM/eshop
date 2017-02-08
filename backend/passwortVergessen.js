@@ -25,16 +25,24 @@ function sendingPassword(req, res, next){
 
         var transporter = nodemailer.createTransport(smtpConfig)
 
-        var irgendwas = db.any("SELECT password FROM employee WHERE name='"+req.params.nutzer+"';").then( function(status){
+        var irgendwas = db.any("SELECT password FROM employee WHERE name='"+req.params.nutzer+"';").then( function(data){
+            res.status(200) .json({
+          
+          data
+        });
+                      console.log(data);
+
+                });
 
             /*var coder = {code :status[0].createinvitecode};
             console.log(coder.code);*/
-        
+            //console.log(data);
+
             var mailOptions = {
                 from: 'Onurs Bastelecke',
                 to: req.params.nutzer, // list of receivers
                 subject: 'Passwort vergessen', // Subject line
-                html: '<div>Lieber Mitarbeiter, <br><br> du hast dein Passwort vergessen, kein Problem! Hier schicken wir es dir gerne noch einmal zu:</div>' 
+                html: '<div>Lieber Mitarbeiter, <br><br> du hast dein Passwort vergessen, kein Problem! Hier schicken wir es dir gerne noch einmal zu: '+'</div>' 
                 //</br>'+' <p>'+coder.code+'</p>' 
                 // html body
             };
@@ -49,8 +57,8 @@ function sendingPassword(req, res, next){
 	
 	       res.sendStatus(200)
 
-        } ) 
-    };
+        } 
+    
      
 /**
  * Export to other node scripts

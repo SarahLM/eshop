@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http'
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
+import {ROUTER_DIRECTIVES, Router, Location} from '@angular2/router';
 //import {productService} from '../_services/productService';
 import {dataService} from '../_services/dataService';
 import { NgForm } from '@angular/forms';
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
 
   public showSuccess: boolean;
   private actionUrl : string;
+  public weiter : boolean;
 
   constructor(private http: Http) {
     //this.actionUrl="http://projektwebshop.f4.htw-berlin.de:8080";
@@ -30,8 +32,10 @@ export class LoginComponent implements OnInit {
   	this.http.get(this.actionUrl+'/login/'+ username+'/'+ password).toPromise()
 	.then((res: Response) => {
     	console.log(res);
-        this.showSuccess = res["_body"] == "erfolgreich eingeloggt";
+      this.showSuccess = res["_body"] == "erfolgreich eingeloggt";
       if (this.showSuccess) form.reset();
+      this.weiter = res["status"] == 200;
+      this.router.navigate(['mitarbeiter-bereich']);
 	});
    }
   ngOnInit() {
