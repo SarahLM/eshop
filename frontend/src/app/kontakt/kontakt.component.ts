@@ -30,6 +30,7 @@ export class KontaktComponent implements OnInit {
 	console.log(res);
       this.showSuccess = res["status"] == 200;
       if (this.showSuccess) form.reset();
+      alert('Anfrage gesendet, bitte ins Postfach gucken')
 	});
    }
 
