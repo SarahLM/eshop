@@ -21,7 +21,6 @@
                 <form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
                     <input id="search_field" type="text" name="search" placeholder="Hier suchen.." [(ngModel)]="term" required ngModel>
                     <select id="auswahl" name="auswahl" class="form-control" required ngModel>
-                        <option>Alle Produkte</option>
                         <option>Papeterie</option>
                         <option>Ordnen</option>
                         <option>Schreibwaren</option>

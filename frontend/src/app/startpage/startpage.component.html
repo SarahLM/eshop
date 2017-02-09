@@ -1,8 +1,8 @@
 <app-mainmenu></app-mainmenu>
 
-<div class="body">
+<div class="body" on-wheel="weg($event)">
 
-    <div id="search_bar" on-wheel="weg($event)">
+    <div id="search_bar" >
         <form>
             <i class="fa fa-search"></i>
             <input id="search_field" (keyup)="onKey($event)" on-wheel="weg($event)" type="text" name="begriff" placeholder="Hier suchen.." [(ngModel)]="begriff">
