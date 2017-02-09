@@ -15,5 +15,9 @@ public cart = JSON.parse(localStorage.getItem("cartItems"));
 
   constructor() { }
 
+alertshow(){
+	
+	alert('nee is nur ein Prototyp, hier gibt es Nichts zu kaufen')
+}
 
 }
