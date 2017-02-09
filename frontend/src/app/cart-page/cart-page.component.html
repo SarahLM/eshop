@@ -8,8 +8,8 @@
         </tr>
           <tfoot>
     <tr>
-      <td>Gesamt: </td>
-      <td>€€€</td>
+      <td>Dozenten-Rabatt Festpreis: </td>
+      <td>21.89 &#x20AC;</td>
     </tr>
   </tfoot>
         <tr *ngFor="let items of cart">
@@ -17,5 +17,9 @@
             <td>{{items.price}} &#x20AC;</td>
         </tr>
     </table>
+    <button id="primarybtn"><a [routerLink]="['/dashboard-startpage']">Kaufen</a></button>
+</div>
+<div>
+  
 </div>
 <app-footer></app-footer>
