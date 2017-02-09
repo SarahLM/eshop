@@ -30,6 +30,7 @@ putArticle(form: NgForm) {
 	    	console.log(res);
 	    	this.showSuccess = res["status"] == 200;
       		if (this.showSuccess){
+           alert('Artikel angelegt')
       		 location.reload();}
       		 else {
       		 alert ('ID bereits verwendet')
