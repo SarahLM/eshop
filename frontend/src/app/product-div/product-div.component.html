@@ -1,7 +1,7 @@
 <section>
     <div class="product-wrapper" *ngFor="let item of myItems">
       <a class="col-md-4 col-md-3 col-sm-1 product link">
-        <a [routerLink]="['product-page', item.id]" class="product-imgwrapper">
+        <a [routerLink]="['/product-page', item.id]" class="product-imgwrapper">
           <img src="/assets/images/{{item.id}}.jpg">
         </a>
         <h2 class="product-category-title">{{item.name}}</h2>
