@@ -47,8 +47,9 @@ export class editproductComponent implements OnInit {
     this.http.put( this.actionUrl+"/update" , form.value ).toPromise()
     .then((res: Response) => {
         console.log(res);
-        this.showSuccess = res["_body"] == "OK";
-          if (this.showSuccess) form.reset();
+        this.showSuccess = res["status"] == 200;
+          if (this.showSuccess) 
+          alert('Artikel geändert');
   });
 
   }
